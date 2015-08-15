@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="../../css/style.css">
+	<title>首页-盛贷网</title>
+</head>
+<body>
+
+	<!-- <include file="Public:header" /> -->
+	
+	<div class="header">
+	<div class="header_top_bg">
+		<div class="header_top">
+			<div class="header_top_l">
+				<p>客服热线&nbsp;&nbsp;400-8501-896</p>
+				<p>工作日时间：9:00-18:00</p>
+			</div>
+			<div class="header_top_r">
+				<span id="loginentry">
+					<a href="javascript:showLC_login();" data-login="login">登入</a>
+					<a href="javascript:showLC_enroll();" data-login="enroll">注册</a>
+					<p data-login="welcome" style="display:none;" data-state="{$Think.session.user}">欢迎您，{$Think.session.user.username}！<a href="__APP__/Licai/logout">退出</a></p>
+					<a href="#"><span class="icons">icon</span>帮助中心</a>
+				</span>
+			</div>
+		</div>
+	</div>
+	
+	
+	<div class="header_main">
+		<h1 class="logo">盛贷网</h1>
+		<ul class="main-nav">
+			<li><a href="#">首&nbsp;&nbsp;页</a>
+			</li>
+			<li class="selected"><a href="#">我要出借</a>
+			</li>
+			<li><a href="#">安全保障</a>
+			</li>
+			<li><a href="#">新手指南</a>
+			</li>
+			<li><a href="#">我的账户</a>
+			</li>
+		</ul>
+	</div>
+
+</div>
+	
+	<div class="container">
+		
+	</div>
+
+	<include file="Public:footer" />
+	<div class="footer">
+		<div class="footer_top">
+			<ul class="footer_nav">
+				<li><a href="">关于我们</a></li>
+				<li><span>|</span></li>
+				<li><a href="">帮助中心</a></li>
+				<li><span>|</span></li>
+				<li><a href="">新手指南</a></li>
+				<li><span>|</span></li>
+				<li><a href="">加入我们</a></li>
+				<li><span>|</span></li>
+				<li><a href="">联系我们</a></li>
+			</ul>
+		</div>
+		<div class="footer_bottom_bg">
+			<div class="footer_bottom">
+				<div class="footer_bottom_l">
+					<p>Copyright&copy;2014-2024:盛莲财富(shengliancaifu.com)</p>
+					<p>客服邮箱：service@shengliancaifu.com</p>
+					<p>版权所有：闽ICP备15012773号-1<!--&nbsp;&nbsp;官方QQ：*****--></p>
+				</div>
+				<div class="footer_bottom_r">
+					<p>客服热线(工作日时间：9：00-18：00)</p>
+					<p><span>400-8501-896</span>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+</body>
+</html>
