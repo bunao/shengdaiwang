@@ -1,0 +1,60 @@
+@fontfamily: ~"tahoma,arial,'Hiragino Sans GB',\5b8b\4f53,sans-serif";
+
+.fl(l){
+	float: left;
+}
+
+.fl(r){
+	float: right;
+}
+
+//参数儿们
+
+@maxwidth: 1016px;
+@default_blue:#2b6ab8;
+@default_oran:#f6af46;
+@bg_grey:#f8f8f8;
+@bg_grey2:#eee;
+@border_grey:#d2d2d2;
+
+.fwhite(){
+	color: #fff;
+}
+.fgrey1(){
+	color: #757575;//浅灰字
+}
+.fgrey2(){
+	color: #5d5d5d;//深灰字
+}
+.ft(@fontsize){
+	font-size: @fontsize;
+}
+
+.icons(@w,@h,@pw,@ph){
+	width: @w;
+	height: @h;
+	font-size: 0;
+	vertical-align: middle;
+	display: inline-block;
+	background: url(../images/icons.png) no-repeat;
+	background-position: @pw @ph;
+}
+
+.button(@w,@h,@r,@color,@fs,@bx,@by){
+	display: inline-block;
+	width: @w;
+	height: @h;
+	line-height: @h;
+	border:0;
+	border-radius: @r;
+	-webkit-border-radius: @r;
+	-moz-border-radius: @r;
+	background: @color url(../images/buttons.png) no-repeat;
+	background-position: @bx @by;
+	color: #fff;
+	text-align: center;
+	font-weight: bold;
+	font-size: @fs;
+	font-family: @fontfamily;
+	cursor: pointer;
+}
