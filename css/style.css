@@ -1,4 +1,10 @@
 @charset "utf-8";
+.icon {
+  font-size: 0;
+  vertical-align: middle;
+  display: inline-block;
+  background: url(../images/icons.png) no-repeat;
+}
 /*----------------样式初始化-------------------*/
 body,
 ul,
@@ -32,7 +38,7 @@ body {
   color: black;
   font-size: 14px;
   margin: 0px;
-  font-family: '微软雅黑',tahoma,arial,'Hiragino Sans GB',\5b8b\4f53,sans-serif;
+  font-family: tahoma,arial,'Hiragino Sans GB',\5b8b\4f53,sans-serif;
 }
 ul {
   list-style-type: none;
@@ -116,10 +122,6 @@ textarea {
   margin-top: -1px;
   width: 13px;
   height: 13px;
-  font-size: 0;
-  vertical-align: middle;
-  display: inline-block;
-  background: url(../images/icons.png) no-repeat;
   background-position: 0 0;
 }
 .header_main {
@@ -221,7 +223,7 @@ textarea {
   text-align: center;
   font-weight: bold;
   font-size: 20px;
-  font-family: '微软雅黑',tahoma,arial,'Hiragino Sans GB',\5b8b\4f53,sans-serif;
+  font-family: tahoma,arial,'Hiragino Sans GB',\5b8b\4f53,sans-serif;
   cursor: pointer;
 }
 .blue_button_l {
@@ -239,7 +241,7 @@ textarea {
   text-align: center;
   font-weight: bold;
   font-size: 22px;
-  font-family: '微软雅黑',tahoma,arial,'Hiragino Sans GB',\5b8b\4f53,sans-serif;
+  font-family: tahoma,arial,'Hiragino Sans GB',\5b8b\4f53,sans-serif;
   cursor: pointer;
 }
 .blue_button_square {
@@ -257,7 +259,7 @@ textarea {
   text-align: center;
   font-weight: bold;
   font-size: 22px;
-  font-family: '微软雅黑',tahoma,arial,'Hiragino Sans GB',\5b8b\4f53,sans-serif;
+  font-family: tahoma,arial,'Hiragino Sans GB',\5b8b\4f53,sans-serif;
   cursor: pointer;
 }
 /*----==============container==============----*/
