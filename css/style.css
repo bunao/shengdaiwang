@@ -32,7 +32,7 @@ body {
   color: black;
   font-size: 14px;
   margin: 0px;
-  font-family: tahoma,arial,'Hiragino Sans GB',\5b8b\4f53,sans-serif;
+  font-family: '微软雅黑',tahoma,arial,'Hiragino Sans GB',\5b8b\4f53,sans-serif;
 }
 ul {
   list-style-type: none;
@@ -221,7 +221,7 @@ textarea {
   text-align: center;
   font-weight: bold;
   font-size: 20px;
-  font-family: tahoma,arial,'Hiragino Sans GB',\5b8b\4f53,sans-serif;
+  font-family: '微软雅黑',tahoma,arial,'Hiragino Sans GB',\5b8b\4f53,sans-serif;
   cursor: pointer;
 }
 .blue_button_l {
@@ -239,7 +239,7 @@ textarea {
   text-align: center;
   font-weight: bold;
   font-size: 22px;
-  font-family: tahoma,arial,'Hiragino Sans GB',\5b8b\4f53,sans-serif;
+  font-family: '微软雅黑',tahoma,arial,'Hiragino Sans GB',\5b8b\4f53,sans-serif;
   cursor: pointer;
 }
 .blue_button_square {
@@ -257,7 +257,7 @@ textarea {
   text-align: center;
   font-weight: bold;
   font-size: 22px;
-  font-family: tahoma,arial,'Hiragino Sans GB',\5b8b\4f53,sans-serif;
+  font-family: '微软雅黑',tahoma,arial,'Hiragino Sans GB',\5b8b\4f53,sans-serif;
   cursor: pointer;
 }
 /*----==============container==============----*/
