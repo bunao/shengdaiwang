@@ -33,6 +33,7 @@ a {
   border: 0;
 }
 body {
+  cursor: default;
   position: relative;
   background: #fff;
   color: black;
@@ -209,6 +210,24 @@ textarea {
 }
 /*----==============buttons==================----*/
 .oran_button_s {
+  display: inline-block;
+  width: 82px;
+  height: 22px;
+  line-height: 22px;
+  border: 0;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  background: #f6af46 url(../images/buttons.png) no-repeat;
+  background-position: 0 -160px;
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+  font-size: 14px;
+  font-family: tahoma,arial,'Hiragino Sans GB',\5b8b\4f53,sans-serif;
+  cursor: pointer;
+}
+.oran_button_l {
   display: inline-block;
   width: 114px;
   height: 32px;
