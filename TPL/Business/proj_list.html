@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="../../css/style.css">
+	<link rel="stylesheet" type="text/css" href="../../css/business.css">
+	<title>项目列表-盛贷网</title>
+</head>
+<body>
+
+	<include file="Public:header" />
+
+	<div class="about-bread">
+		<div class="wrapper">
+			<a href="" class="bread-target">首页</a>
+			<a href="" class="bread-target current">我要出借</a>
+		</div>
+	</div>
+	<div class="main">
+		<div class="project_list">
+			<div class="lc_project">
+              <table class="pro_content" id="table_showtime_{$vo.id}" > 
+                <tbody>
+                  <tr>
+                    <td colspan="5" class="proname">固定期限借款项目<span>编号JND20150803-01</span></td>
+                  </tr>
+                  <tr>
+                    <td width="150px" class="fblue">10%-13%</td>
+                    <td width="104px" class="fstrong">3个月</td>
+                    <td width="250px">融资金额: <span data-type="finance_account">10000</span>万元</td>
+                    <td width="290px"><span class="icon icon_ding">icon</span>计息方式：按月付息</td>
+                    <td><span class="icon icon_clock">icon</span>剩余时间</td>
+                  </tr>
+                  <tr>
+                    <td class="fontsytle2">预期年化收益率 </td>
+                    <td class="fontsytle2">融资期限</td>
+                    <td>当前进度：<span class="process_bar">进度条<span class="process_bar before">当前进度条</span></span><span data-type="process_val"> </span></td>
+                    <td><span class="icon icon_ding">icon</span>还款方式：按月还款</td>
+                    <td>
+                        <span data-type="deadline" style="display:none;">{$vo.deadline}</span>
+                        <input type="hidden" class="time_val" for="{$vo.id}" value=" " />
+                        <span class="countdown" id="showtime_{$vo.id}"> </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="2"><a href="__APP__/Licai/detail/id/{$vo.id}" class="oran_button_l">查看详情</a></td>
+                    <td>剩余金额：<span>383838383</span>元<span data-type="raisedmoney" style="display:none;">{$vo.raise}</span></td>
+                    <td><span class="icon icon_ding">icon1</span>担保方式</td>
+                    <td><a href="__APP__/Licai/detail/id/{$vo.id}" class="oran_button_l" data-type="applybutton">我要出借</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="lc_project">
+              <table class="pro_content" id="table_showtime_{$vo.id}" > 
+                <tbody>
+                  <tr>
+                    <td colspan="5" class="proname">固定期限借款项目<span>编号JND20150803-01</span></td>
+                  </tr>
+                  <tr>
+                    <td width="150px" class="fblue">10%-13%</td>
+                    <td width="104px" class="fstrong">3个月</td>
+                    <td width="250px">融资金额: <span data-type="finance_account">10000</span>万元</td>
+                    <td width="290px"><span class="icon icon_ding">icon</span>计息方式：按月付息</td>
+                    <td><span class="icon icon_clock">icon</span>剩余时间</td>
+                  </tr>
+                  <tr>
+                    <td class="fontsytle2">预期年化收益率 </td>
+                    <td class="fontsytle2">融资期限</td>
+                    <td>当前进度：<span class="process_bar">进度条<span class="process_bar before">当前进度条</span></span><span data-type="process_val"> </span></td>
+                    <td><span class="icon icon_ding">icon</span>还款方式：按月还款</td>
+                    <td>
+                        <span data-type="deadline" style="display:none;">{$vo.deadline}</span>
+                        <input type="hidden" class="time_val" for="{$vo.id}" value=" " />
+                        <span class="countdown" id="showtime_{$vo.id}"> </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="2"><a href="__APP__/Licai/detail/id/{$vo.id}" class="oran_button_l">查看详情</a></td>
+                    <td>剩余金额：<span>383838383</span>元<span data-type="raisedmoney" style="display:none;">{$vo.raise}</span></td>
+                    <td><span class="icon icon_ding">icon1</span>担保方式</td>
+                    <td><a href="__APP__/Licai/detail/id/{$vo.id}" class="oran_button_l" data-type="applybutton">我要出借</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="lc_project">
+              <table class="pro_content" id="table_showtime_{$vo.id}" > 
+                <tbody>
+                  <tr>
+                    <td colspan="5" class="proname">固定期限借款项目<span>编号JND20150803-01</span></td>
+                  </tr>
+                  <tr>
+                    <td width="150px" class="fblue">10%-13%</td>
+                    <td width="104px" class="fstrong">3个月</td>
+                    <td width="250px">融资金额: <span data-type="finance_account">10000</span>万元</td>
+                    <td width="290px"><span class="icon icon_ding">icon</span>计息方式：按月付息</td>
+                    <td><span class="icon icon_clock">icon</span>剩余时间</td>
+                  </tr>
+                  <tr>
+                    <td class="fontsytle2">预期年化收益率 </td>
+                    <td class="fontsytle2">融资期限</td>
+                    <td>当前进度：<span class="process_bar">进度条<span class="process_bar before">当前进度条</span></span><span data-type="process_val"> </span></td>
+                    <td><span class="icon icon_ding">icon</span>还款方式：按月还款</td>
+                    <td>
+                        <span data-type="deadline" style="display:none;">{$vo.deadline}</span>
+                        <input type="hidden" class="time_val" for="{$vo.id}" value=" " />
+                        <span class="countdown" id="showtime_{$vo.id}"> </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="2"><a href="__APP__/Licai/detail/id/{$vo.id}" class="oran_button_l">查看详情</a></td>
+                    <td>剩余金额：<span>383838383</span>元<span data-type="raisedmoney" style="display:none;">{$vo.raise}</span></td>
+                    <td><span class="icon icon_ding">icon1</span>担保方式</td>
+                    <td><a href="__APP__/Licai/detail/id/{$vo.id}" class="oran_button_l" data-type="applybutton">我要出借</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+		</div>
+		<div class="moreproj"><a href="#" class="blue_button_l">查看更多项目</a></div>
+	</div>
+	
+	<include file="Public:footer" />
+
+</body>
+</html>
