@@ -1,1 +1,151 @@
 @charset"utf-8";
+@import url(functs.less);
+div.about-bread{
+	width: 100%;
+	height: 40px;
+	background-color: @default_blue;
+	.wrapper{
+  	width: @maxwidth;
+  	margin: 0 auto;
+  	font-size: 16px;
+  	line-height: 40px;
+  }
+  .bread-target{
+  	.fwhite();
+  	margin-right: 35px;
+  }
+  .current{
+  	position: relative;
+  	&:after{
+  		content: "";
+  		display: inline-block;
+  		position: absolute;
+  		top: 17px;
+  		left: 50%;
+  		margin-left: -7px;
+  		width: 0;
+  		height: 0;
+  		border-color: transparent transparent #fff transparent;
+  		border-style: dashed dashed solid dashed;
+  		border-width: 7px;  
+  	}
+  }
+}
+.main{
+	width: @maxwidth;
+	margin: 30px auto;
+	font-size: 16px;
+}
+.b-purchase-left{
+	p{
+		line-height: 32px;
+	}
+	width: 570px;
+	height: 330px;
+	background-color: @bg_grey;
+	padding: 0 35px;
+	.fgrey2();
+	h3{
+		font-size: 20px;
+		font-weight: bold;
+		line-height: 56px;
+		span{
+			font-weight: normal;
+			font-size: 15px;
+			float: right;
+		}
+	}
+	ul{
+		li{
+			float: left;
+			width: 190px;
+			margin: 20px 0;
+		}
+		span{
+			display: block;
+			width: 100%;
+			text-align: center;
+			font-size: 15px;
+		}
+		span.pro-value{
+			font-size: 28px;
+		}
+		#rate-value{
+			color: @default_oran;
+			font-weight: bold;
+		}
+	}
+	.b-progress{
+		line-height: 45px;
+	}
+	.progress-value{
+		@prowidth:410px;
+		@proheight:12px;
+		position: relative;
+		&:before{
+			content: "";
+			display: inline-block;
+			width: @prowidth;
+			height: @proheight;
+			border-radius: @proheight/2;
+			background-color:#dcdddd;
+			margin: 0 12px;
+		}
+		&:after{
+			content: "";
+			position: absolute;
+			top: 5px;
+			left: 0;
+			display: inline-block;
+			width: @prowidth*0.59;
+			height: @proheight;
+			border-radius: @proheight/2;
+			background-color:#43b518;
+			margin: 0 12px;
+		}
+	}
+	.b-pro-restime{
+		line-height: 30px;
+		float: left;
+		.icon{
+			.icons(12px,12px,-30px,0px);
+			margin-top: -3px;
+		}
+	}
+	.b-identify{
+		float: right;
+		em{
+			font-style: normal;
+		}
+		.b-field-trip{
+			span{
+				.icons(22px,22px,0px,-34px);
+				margin:-1px 8px 0 0;
+			}
+		}
+		.b-info-complete{
+			span{
+				.icons(22px,22px,-22px,-34px);
+				margin: -2px 8px 0 22px;
+			}
+		}
+	}
+	.b-intercalc-way,
+	.repay-mode,
+	.secure-method
+	{
+		span.icon{
+			.icons(10px,10px,-16px,0);
+			margin-top: -3px;
+		}
+	}
+	.secure-method{
+		float: left;
+	}
+	.check-agree{
+		float: right;
+		a{
+			color: #0f96d9;
+		}
+	}
+}
