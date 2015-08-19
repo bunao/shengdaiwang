@@ -5,9 +5,12 @@
   display: inline-block;
   background: url(../images/icons.png) no-repeat;
 }
+<<<<<<< HEAD
 * {
   font-family: 'Microsoft Yahei';
 }
+=======
+>>>>>>> origin/front-end
 .main {
   width: 1016px;
   margin: 30px auto;
