@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title>交易记录|盛贷网</title>
 	<link rel="stylesheet" href="../../css/style.css">
+	<link rel="stylesheet" href="../../css/account.css">
 </head>
 <body>
 	<div class="header">
@@ -43,9 +44,7 @@
 	</div>
 	<div class="about-bread">
 		<div class="wrapper">
-			<a href="" class="bread-target">首页</a>
-			<a href="" class="bread-target">我要出借</a>
-			<span class="bread-target current">项目信息介绍</span>
+			<span class="bread-target current">我的账户</span>
 		</div>
 	</div>
 	<div class="container clearfix">
@@ -56,11 +55,11 @@
 					<span class="icon">icon</span>
 					<a href="index.php">账户总览</a>
 				</li>
-				<li class="acc-safe acc-item-on">
+				<li class="acc-safe">
 					<span class="icon">icon</span>
 					<a href="securityCenter.php">安全中心</a>
 				</li>
-				<li class="acc-trrecord">
+				<li class="acc-trrecord acc-item-on">
 					<span class="icon">icon</span>
 					<a href="tradeLog.php">交易记录</a>
 				</li>
@@ -84,6 +83,99 @@
 					<a href="protocol.php">协议管理</a>
 				</li>
 			</ul>
+		</div>
+		<div class="right-side-box">
+			<h2>交易记录</h2>
+			<div class="tl-choose-type clearfix">
+				<h6>交易类型</h6>
+				<ul class="tl-all-type">
+					<li><a href="">全部</a></li>
+					<li><a href="">充值</a></li>
+					<li class=""><a href="">提现</a></li>
+					<li class="tl-more tl-current">
+						<a href="">更多<span class="icon"></span></a>
+						<ul>
+							<li>出借</li>
+							<li>收益</li>
+							<li>奖励</li>
+							<li>退款</li>
+							<li>提现资金冻结</li>
+							<li>提现资金解冻</li>
+							<li>提现复合通过</li>
+							<li>活期通转入</li>
+							<li>活期通转出</li>
+							<li>逾期还款</li>
+							<li>线下充值</li>
+							<li>出让逾期债权</li>
+							<li>认购逾期债权</li>
+							<li>赎回</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<div class="clearfix">
+				<div class="tl-fliter-ctrl">
+					<div class="tl-recent">
+						<input type="text" value="最近7天">
+						<span class="icon"></span>
+						
+						<ul>
+							<li>最近7天</li>
+							<li>最近14天</li>
+							<li>最近30天</li>
+							<li>不限</li>
+						</ul>
+					</div>
+					<a href="">更多条件<span class="icon"></span></a>
+				</div>
+			</div>
+			
+			<div class="tl-fliter">
+				<span>起止日期：</span>
+				<div class="tl-input-icon tl-icon-date">
+					<input type="text" value="日期选择">
+					<span class="icon"></span>
+				</div>
+				<span>-</span>
+				<div class="tl-input-icon tl-icon-date tl-place">
+					<input type="text" value="日期选择">
+					<span class="icon"></span>
+				</div>
+				<span>金额范围：</span>
+				<div class="tl-input-icon tl-icon-money">
+					<input type="text" value="金额输入">
+					<span class="icon"></span>
+				</div>
+				<span>-</span>
+				<div class="tl-input-icon tl-icon-money">
+					<input type="text" value="金额输入">
+					<span class="icon"></span>
+				</div>
+				<a href="" class="oran_button_xs">筛选</a>
+			</div>
+
+			<div class="tl-result">
+				<table class="tl-conclusion">
+					<tbody>
+						<tr>
+							<td><span>充值</span></td>
+							<td>下单笔数：<span>12</span></td>
+							<td>总交易金额：<span>29,709元</span></td>
+						</tr>
+					</tbody>
+				</table>
+				<table class="tl-detail">
+					<tbody>
+						<tr>
+							<td>时间</td>
+							<td>类型交易单号</td>
+							<td>交易对方</td>
+							<td>金额（元）</td>
+						</tr>
+						<tr><td colspan='4'><span>暂无交易</span></td></tr>
+					</tbody>
+				</table>
+			</div>
 		</div>
 	</div>
 	<div class="footer">
