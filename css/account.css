@@ -122,3 +122,135 @@
   width: 820px;
   float: right;
 }
+/*----==============index.html==============----*/
+.person-top {
+  height: 80px;
+  width: 100%;
+  background-color: #f8f8f8;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  padding: 14px 100px 0 34px;
+  position: relative;
+  margin-bottom: 14px;
+}
+.person-top .greet {
+  color: #f6af46;
+  line-height: 26px;
+}
+.person-top .last-login {
+  color: #5d5d5d;
+  line-height: 26px;
+}
+.person-top .secure-level {
+  position: absolute;
+  bottom: 20px;
+  right: 100px;
+}
+.person-top .secure-level .processbar {
+  margin-left: 10px;
+}
+.person-top .secure-level a {
+  color: #2b6ab8;
+}
+.person-main {
+  height: 270px;
+  background-color: #f8f8f8;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  padding: 16px 34px;
+  color: #5d5d5d;
+}
+.person-main .per-assets {
+  float: left;
+}
+.person-main .per-balance {
+  float: left;
+  margin-left: 320px;
+}
+.person-main .total-income {
+  line-height: 30px;
+}
+.person-main .total-num {
+  line-height: 60px;
+}
+.person-main .total-num span {
+  font-size: 45px;
+  margin-right: 5px;
+}
+.person-main .assets-list {
+  margin-top: 10px;
+}
+.person-main .assets-list li {
+  height: 30px;
+  line-height: 30px;
+}
+.person-main .assets-list span {
+  margin: -4px 4px 0 0;
+}
+.person-main .assets-list span[data-assets-list="ben"] {
+  width: 18px;
+  height: 18px;
+  background-position: -109px -16px;
+}
+.person-main .assets-list span[data-assets-list="shou"] {
+  width: 18px;
+  height: 18px;
+  background-position: -129px -16px;
+}
+.person-main .assets-list span[data-assets-list="dong"] {
+  width: 18px;
+  height: 18px;
+  background-position: -149px -16px;
+}
+.person-main .assets-list span[data-assets-list="jiang"] {
+  width: 18px;
+  height: 18px;
+  background-position: -169px -16px;
+}
+.account-trade {
+  margin-top: 24px;
+}
+.account-trade .repayment {
+  width: 440px;
+  float: left;
+}
+.account-trade .trrecord {
+  width: 354px;
+  float: right;
+}
+.account-trade .record-name span {
+  color: #5d5d5d;
+  font-size: 22px;
+}
+.account-trade .record-name a {
+  float: right;
+}
+.account-trade .record-detail {
+  color: #5d5d5d;
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 10px;
+}
+.account-trade .record-detail th,
+.account-trade .record-detail td {
+  padding: 0 4px;
+}
+.account-trade .record-detail thead th {
+  font-size: 14px;
+  font-weight: normal;
+  background: #eeeeee;
+  height: 49px;
+}
+.account-trade .record-detail thead th:last-child {
+  line-height: 24px;
+}
+.account-trade .record-detail tbody td {
+  background: #f8f8f8;
+  height: 42px;
+  border-bottom: 1px solid #eeeeee;
+}
+.account-trade .record-detail tbody td:last-child {
+  border-bottom: none;
+}
