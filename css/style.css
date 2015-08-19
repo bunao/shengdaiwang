@@ -358,3 +358,8 @@ div.about-bread .current:after {
 .left-side-bar span {
   margin-right: 3px;
 }
+/*----==============right-side-box==============----*/
+.right-side-box {
+  width: 820px;
+  float: right;
+}
