@@ -122,3 +122,17 @@
   width: 820px;
   float: right;
 }
+.right-side-box h2 {
+  line-height: 35px;
+  margin-top: 30px;
+  font-size: 20px;
+  color: #5d5d5d;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+.right-side-box h2:after {
+  content: "";
+  display: block;
+  height: 7px;
+  background-image: url(../images/stripe_bg.png);
+}
