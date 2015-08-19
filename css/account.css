@@ -254,3 +254,120 @@
 .account-trade .record-detail tbody td:last-child {
   border-bottom: none;
 }
+/*----==============securityCenter.html==============----*/
+.security {
+  color: #757575;
+  width: 100%;
+  height: 330px;
+  background-color: #f8f8f8;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  padding: 25px 44px;
+}
+.security .secure-level {
+  height: 30px;
+  line-height: 30px;
+  margin-bottom: 14px;
+}
+.security .secure-level .processbar {
+  margin: 0 10px;
+  display: inline-block;
+  position: relative;
+  height: 30px;
+  line-height: 30px;
+}
+.security .secure-level .processbar:before {
+  content: " ";
+  display: inline-block;
+  width: 230px;
+  height: 10px;
+  background-color: #cbcbcb;
+  border-radius: 5px;
+  position: relative;
+  margin-right: 5px;
+}
+.security .secure-level .processbar:after {
+  content: " ";
+  display: inline-block;
+  width: 0;
+  height: 10px;
+  background-color: #42b518;
+  border-radius: 5px;
+  position: absolute;
+  left: 0;
+  top: 10px;
+}
+.security .secure-level .processbar.high {
+  color: #42b518;
+}
+.security .secure-level .processbar.high:after {
+  width: 160px;
+  background: #42b518 url(../images/buttons.png) no-repeat 0 -290px;
+}
+.security .secure-level .advice {
+  color: red;
+}
+.protected-wrap .icon {
+  margin-right: 5px;
+  margin-top: -3px;
+}
+.protected-wrap .icon.well {
+  width: 14px;
+  height: 14px;
+  background-position: -80px 0;
+}
+.protected-wrap .icon.bad {
+  width: 14px;
+  height: 14px;
+  background-position: -97px 0;
+}
+.protected-wrap tr {
+  height: 36px;
+}
+.protected-wrap .applypassword .processbar {
+  display: inline-block;
+  position: relative;
+  height: 36px;
+  line-height: 36px;
+  margin: 0 10px;
+}
+.protected-wrap .applypassword .processbar:before {
+  content: " ";
+  display: inline-block;
+  width: 120px;
+  height: 10px;
+  background-color: #cbcbcb;
+  border-radius: 5px;
+  position: relative;
+  margin-right: 5px;
+}
+.protected-wrap .applypassword .processbar:after {
+  content: " ";
+  display: inline-block;
+  width: 0;
+  height: 10px;
+  background-color: #ff4102;
+  border-radius: 5px;
+  position: absolute;
+  left: 0;
+  top: 13px;
+}
+.protected-wrap .operate a {
+  text-decoration: underline;
+  margin: 0 6px;
+  color: #757575;
+}
+.sec-tip {
+  background: #f8f8f8;
+  padding: 10px 44px 26px;
+  margin: 20px 0;
+}
+.sec-tip p {
+  color: #757575;
+  line-height: 24px;
+}
+.sec-tip p:first-child {
+  font-size: 16px;
+  line-height: 40px;
+}

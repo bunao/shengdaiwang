@@ -66,3 +66,30 @@
 	font-family: @fontfamily;
 	cursor: pointer;
 }
+
+.bar(@w,@h,@color){
+	display: inline-block;
+	width: @w;
+	height: @h;
+	background-color: @color;
+	border-radius: @h/2;
+}
+.process_bar(@w,@h,@forecolor,@lineheight){
+	display: inline-block;
+	position: relative;
+	height: @lineheight;
+	line-height: @lineheight;
+	&:before{
+		content: " ";
+		.bar(@w,@h,#cbcbcb);
+		position: relative;
+		margin-right: 5px;
+	}
+	&:after{
+		content: " ";
+		.bar(0,@h,@forecolor);
+		position: absolute;
+		left: 0;
+		top: @lineheight/2-@h/2;
+	}
+}
