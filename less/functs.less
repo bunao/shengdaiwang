@@ -1,4 +1,4 @@
-@fontfamily: ~"tahoma,arial,'Hiragino Sans GB',\5b8b\4f53,sans-serif";
+@fontfamily: ~"'微软雅黑',tahoma,arial,'Hiragino Sans GB',\5b8b\4f53,sans-serif";
 
 .fl(l){
 	float: left;
@@ -30,13 +30,21 @@
 	font-size: @fontsize;
 }
 
-.icons(@w,@h,@pw,@ph){
-	width: @w;
-	height: @h;
+.borderbox(){
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+
+.icon{
 	font-size: 0;
 	vertical-align: middle;
 	display: inline-block;
 	background: url(../images/icons.png) no-repeat;
+}
+.icons(@w,@h,@pw,@ph){
+	width: @w;
+	height: @h;
 	background-position: @pw @ph;
 }
 

@@ -3,7 +3,7 @@
 /*----------------样式初始化-------------------*/
 
 body,ul,ol,li,dl,dt,dd,p,h1,h2,h3,h4,h5,h6,form,fieldset,table,td,img,div,span,a{margin:0;padding:0;border:0;}
-body{ position:relative;background:#fff; color:black; font-size:14px; margin:0px; font-family: @fontfamily; }
+body{ cursor: default; position:relative;background:#fff; color:black; font-size:14px; margin:0px; font-family: @fontfamily; }
 ul{list-style-type:none;}
 select,input,img,select{vertical-align:middle;}
 h1,h2,h3,h4,h5{ font-weight: normal; } 
@@ -173,8 +173,10 @@ input, button, select, textarea { outline:none; }
 }
 
 /*----==============buttons==================----*/
-
 .oran_button_s{
+	.button(82px,22px,4px,@default_oran,14px,0,-160px);
+}
+.oran_button_l{
 	.button(114px,32px,5px,@default_oran,20px,0,0);
 }
 .blue_button_l{
