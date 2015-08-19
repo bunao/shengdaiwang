@@ -224,11 +224,7 @@ textarea {
   text-align: center;
   font-weight: bold;
   font-size: 14px;
-<<<<<<< HEAD
   font-family: '微软雅黑',tahoma,arial,'Hiragino Sans GB',\5b8b\4f53,sans-serif;
-=======
-  font-family: tahoma,arial,'Hiragino Sans GB',\5b8b\4f53,sans-serif;
->>>>>>> origin/front-end
   cursor: pointer;
 }
 .oran_button_l {
@@ -289,4 +285,76 @@ textarea {
 .container {
   width: 1016px;
   margin: 0 auto;
+}
+/*----==============about-bread==============----*/
+div.about-bread {
+  width: 100%;
+  height: 40px;
+  background-color: #2b6ab8;
+}
+div.about-bread .wrapper {
+  width: 1016px;
+  margin: 0 auto;
+  font-size: 16px;
+  line-height: 40px;
+}
+div.about-bread .bread-target {
+  color: #fff;
+  margin-right: 35px;
+}
+div.about-bread .current {
+  position: relative;
+}
+div.about-bread .current:after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 17px;
+  left: 50%;
+  margin-left: -7px;
+  width: 0;
+  height: 0;
+  border-color: transparent transparent #fff transparent;
+  border-style: dashed dashed solid dashed;
+  border-width: 7px;
+}
+/*----==============account-sidebar==============----*/
+.left-side-bar {
+  width: 140px;
+  margin: 15px 0;
+  float: left;
+}
+.left-side-bar a {
+  font-size: 14px;
+  color: #5d5d5d;
+}
+.left-side-bar h3 {
+  font-size: 14px;
+  margin: 15px 0 10px;
+  color: #5d5d5d;
+}
+.left-side-bar ul {
+  list-style: none;
+  border: 1px solid #f9f9f9;
+}
+.left-side-bar li {
+  height: 30px;
+  line-height: 33px;
+  border-top: 1px solid #f9f9f9;
+  border-bottom: 3px solid transparent;
+  padding-left: 30px;
+  cursor: pointer;
+}
+.left-side-bar li:hover {
+  background-color: #f8f8f8;
+}
+.left-side-bar li.acc-item-on {
+  background-color: #2b6ab8;
+  border-bottom: 3px solid #10428b;
+}
+.left-side-bar li.acc-item-on a {
+  color: #fff;
+}
+.left-side-bar span {
+  margin-right: 3px;
 }

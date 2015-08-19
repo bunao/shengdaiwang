@@ -191,3 +191,99 @@ input, button, select, textarea { outline:none; }
 	width: @maxwidth;
 	margin: 0 auto;
 }
+/*----==============about-bread==============----*/
+div.about-bread{
+	width: 100%;
+	height: 40px;
+	background-color: @default_blue;
+	.wrapper{
+  	width: @maxwidth;
+  	margin: 0 auto;
+  	font-size: 16px;
+  	line-height: 40px;
+  }
+  .bread-target{
+  	.fwhite();
+  	margin-right: 35px;
+  }
+  .current{
+  	position: relative;
+  	&:after{
+  		content: "";
+  		display: inline-block;
+  		position: absolute;
+  		top: 17px;
+  		left: 50%;
+  		margin-left: -7px;
+  		width: 0;
+  		height: 0;
+  		border-color: transparent transparent #fff transparent;
+  		border-style: dashed dashed solid dashed;
+  		border-width: 7px;  
+  	}
+  }
+}
+
+/*----==============account-sidebar==============----*/
+.left-side-bar{
+	width: 140px;
+	margin: 15px 0;
+	float: left;
+	a{
+		font-size:14px;
+		.fgrey2();
+	}
+	h3{
+		font-size:14px;
+		margin: 15px 0 10px;
+		.fgrey2();
+	}
+	ul{
+		list-style: none;
+		border: 1px solid #f9f9f9;
+	}
+	li{
+		height: 30px;
+		line-height: 33px;
+		border-top: 1px solid #f9f9f9;
+		border-bottom: 3px solid transparent;
+		padding-left: 30px;
+		cursor: pointer;
+	}
+	li:hover{
+		background-color: @bg_grey;
+	}
+	li.acc-item-on{
+		a{
+			color: #fff;
+		}
+		
+		background-color: @default_blue;
+		border-bottom: 3px solid #10428b;
+
+	}
+	span{
+		margin-right: 3px;
+	}
+	li.acc-overview span{
+		//.icons(14px,14px,);
+	}
+	li.acc-safe span{
+		//.icons(14px,14px,);
+	}
+	li.acc-trrecord span{
+		//.icons(14px,14px,);
+	}
+	li.acc-pay span{
+		//.icons(14px,14px,);
+	}
+	li.acc-bank span{
+		//.icons(14px,14px,);
+	}
+	li.acc-inrecord span{
+		//.icons(14px,14px,);
+	}
+	li.acc-agree span{
+		//.icons(14px,14px,);
+	}
+}
