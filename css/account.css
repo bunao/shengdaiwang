@@ -10,6 +10,7 @@
   width: 140px;
   margin: 15px 0;
   float: left;
+  /* li hover span*/
 }
 .left-side-bar a {
   font-size: 14px;
@@ -44,6 +45,77 @@
 }
 .left-side-bar span {
   margin-right: 3px;
+  margin-top: -3px;
+}
+.left-side-bar li.acc-overview span {
+  width: 14px;
+  height: 14px;
+  background-position: -45px -40px;
+}
+.left-side-bar li.acc-safe span {
+  width: 14px;
+  height: 14px;
+  background-position: -61px -40px;
+}
+.left-side-bar li.acc-trrecord span {
+  width: 14px;
+  height: 14px;
+  background-position: -77px -40px;
+}
+.left-side-bar li.acc-pay span {
+  width: 14px;
+  height: 14px;
+  background-position: -93px -40px;
+}
+.left-side-bar li.acc-bank span {
+  width: 14px;
+  height: 14px;
+  background-position: -109px -40px;
+}
+.left-side-bar li.acc-inrecord span {
+  width: 14px;
+  height: 14px;
+  background-position: -45px -72px;
+}
+.left-side-bar li.acc-agree span {
+  width: 14px;
+  height: 14px;
+  background-position: -61px -72px;
+}
+.left-side-bar li.acc-overview.acc-item-on span {
+  width: 14px;
+  height: 14px;
+  background-position: -45px -56px;
+}
+.left-side-bar li.acc-safe.acc-item-on span {
+  width: 14px;
+  height: 14px;
+  background-position: -61px -56px;
+}
+.left-side-bar li.acc-trrecord.acc-item-on span {
+  width: 14px;
+  height: 14px;
+  background-position: -77px -56px;
+}
+.left-side-bar li.acc-pay.acc-item-on span {
+  width: 14px;
+  height: 14px;
+  background-position: -93px -56px;
+}
+.left-side-bar li.acc-bank.acc-item-on span {
+  width: 14px;
+  height: 14px;
+  background-position: -109px -56px;
+}
+.left-side-bar li.acc-inrecord.acc-item-on span {
+  width: 14px;
+  height: 14px;
+  background-position: -45px -88px;
+}
+.left-side-bar li.acc-agree.acc-item-on span {
+  width: 14px;
+  height: 14px;
+  background-position: -61px -88px;
 }
 /*----==============right-side-box==============----*/
 .right-side-box {
