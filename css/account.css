@@ -1,0 +1,52 @@
+@charset "utf-8";
+.icon {
+  font-size: 0;
+  vertical-align: middle;
+  display: inline-block;
+  background: url(../images/icons.png) no-repeat;
+}
+/*----==============account-sidebar==============----*/
+.left-side-bar {
+  width: 140px;
+  margin: 15px 0;
+  float: left;
+}
+.left-side-bar a {
+  font-size: 14px;
+  color: #5d5d5d;
+}
+.left-side-bar h3 {
+  font-size: 14px;
+  margin: 15px 0 10px;
+  color: #5d5d5d;
+}
+.left-side-bar ul {
+  list-style: none;
+  border: 1px solid #f9f9f9;
+}
+.left-side-bar li {
+  height: 30px;
+  line-height: 33px;
+  border-top: 1px solid #f9f9f9;
+  border-bottom: 3px solid transparent;
+  padding-left: 30px;
+  cursor: pointer;
+}
+.left-side-bar li:hover {
+  background-color: #f8f8f8;
+}
+.left-side-bar li.acc-item-on {
+  background-color: #2b6ab8;
+  border-bottom: 3px solid #10428b;
+}
+.left-side-bar li.acc-item-on a {
+  color: #fff;
+}
+.left-side-bar span {
+  margin-right: 3px;
+}
+/*----==============right-side-box==============----*/
+.right-side-box {
+  width: 820px;
+  float: right;
+}
