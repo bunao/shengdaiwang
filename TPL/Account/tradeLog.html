@@ -4,116 +4,111 @@
 	<meta charset="UTF-8">
 	<title>交易记录|盛贷网</title>
 	<link rel="stylesheet" href="../../css/style.css">
+	<link rel="stylesheet" href="../../css/account.css">
 </head>
 <body>
-	<div class="header">
-		<div class="header_top_bg">
-			<div class="header_top">
-				<div class="header_top_l">
-					<p>客服热线&nbsp;&nbsp;400-8501-896</p>
-					<p>工作日时间：9:00-18:00</p>
-				</div>
-				<div class="header_top_r">
-					<span id="loginentry">
-						<a href="javascript:showLC_login();" data-login="login">登入</a>
-						<a href="javascript:showLC_enroll();" data-login="enroll">注册</a>
-						<p data-login="welcome" style="display:none;" data-state="{$Think.session.user}">欢迎您，{$Think.session.user.username}！<a href="__APP__/Licai/logout">退出</a></p>
-						<a href="#"><span class="icon">icon</span>帮助中心</a>
-					</span>
-				</div>
-			</div>
-		</div>
-
-
-		<div class="header_main">
-			<h1 class="logo"><a href="index.html">盛贷网</a></h1>
-			<ul class="main-nav">
-				<li><a href="#">首&nbsp;&nbsp;页</a>
-				</li>
-				<li class="selected"><a href="#">我要出借</a>
-				</li>
-				<li><a href="#">安全保障</a>
-				</li>
-				<li><a href="#">新手指南</a>
-				</li>
-				<li><a href="#">我的账户</a>
-				</li>
-			</ul>
-		</div>
-	</div>
+	<include file="Public:header" />
 	<div class="about-bread">
 		<div class="wrapper">
-			<a href="" class="bread-target">首页</a>
-			<a href="" class="bread-target">我要出借</a>
-			<span class="bread-target current">项目信息介绍</span>
+			<span class="bread-target current">我的账户</span>
 		</div>
 	</div>
 	<div class="container clearfix">
-		<div class="left-side-bar">
-			<h3 class="acc-title">我的账户</h3>
-			<ul class="acc-item">
-				<li class="acc-overview">
-					<span class="icon">icon</span>
-					<a href="index.php">账户总览</a>
-				</li>
-				<li class="acc-safe acc-item-on">
-					<span class="icon">icon</span>
-					<a href="securityCenter.php">安全中心</a>
-				</li>
-				<li class="acc-trrecord">
-					<span class="icon">icon</span>
-					<a href="tradeLog.php">交易记录</a>
-				</li>
-				<li class="acc-pay">
-					<span class="icon">icon</span>
-					<a href="recharge.php">充值提现</a>
-				</li>
-				<li class="acc-bank">
-					<span class="icon">icon</span>
-					<a href="bankCards.php">银行卡管理</a>
-				</li>
-			</ul>
-			<h3 class="acc-title">我的出借</h3>
-			<ul class="acc-item">
-				<li class="acc-inrecord">
-					<span class="icon">icon</span>
-					<a href="investLog.php">出借记录</a>
-				</li>
-				<li class="acc-agree">
-					<span class="icon">icon</span>
-					<a href="protocol.php">协议管理</a>
-				</li>
-			</ul>
-		</div>
-	</div>
-	<div class="footer">
-		<div class="footer_top">
-			<ul class="footer_nav">
-				<li><a href="">关于我们</a></li>
-				<li><span>|</span></li>
-				<li><a href="">帮助中心</a></li>
-				<li><span>|</span></li>
-				<li><a href="">新手指南</a></li>
-				<li><span>|</span></li>
-				<li><a href="">加入我们</a></li>
-				<li><span>|</span></li>
-				<li><a href="">联系我们</a></li>
-			</ul>
-		</div>
-		<div class="footer_bottom_bg">
-			<div class="footer_bottom">
-				<div class="footer_bottom_l">
-					<p>Copyright&copy;2014-2024:盛莲财富(shengliancaifu.com)</p>
-					<p>客服邮箱：service@shengliancaifu.com</p>
-					<p>版权所有：闽ICP备15012773号-1<!--&nbsp;&nbsp;官方QQ：*****--></p>
+		<include file="Public:account-sidebar" />
+		<div class="right-side-box">
+			<h2>交易记录</h2>
+			<div class="tl-choose-type clearfix">
+				<h6>交易类型</h6>
+				<ul class="tl-all-type">
+					<li><a href="">全部</a></li>
+					<li><a href="">充值</a></li>
+					<li class=""><a href="">提现</a></li>
+					<li class="tl-more tl-current">
+						<a href="">更多<span class="icon"></span></a>
+						<ul>
+							<li>出借</li>
+							<li>收益</li>
+							<li>奖励</li>
+							<li>退款</li>
+							<li>提现资金冻结</li>
+							<li>提现资金解冻</li>
+							<li>提现复合通过</li>
+							<li>活期通转入</li>
+							<li>活期通转出</li>
+							<li>逾期还款</li>
+							<li>线下充值</li>
+							<li>出让逾期债权</li>
+							<li>认购逾期债权</li>
+							<li>赎回</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<div class="clearfix">
+				<div class="tl-fliter-ctrl">
+					<div class="tl-recent">
+						<input type="text" value="最近7天">
+						<span class="icon"></span>
+						
+						<ul>
+							<li>最近7天</li>
+							<li>最近14天</li>
+							<li>最近30天</li>
+							<li>不限</li>
+						</ul>
+					</div>
+					<a href="">更多条件<span class="icon"></span></a>
 				</div>
-				<div class="footer_bottom_r">
-					<p>客服热线(工作日时间：9：00-18：00)</p>
-					<p><span>400-8501-896</span>
-					</p>
+			</div>
+			
+			<div class="tl-fliter">
+				<span>起止日期：</span>
+				<div class="tl-input-icon tl-icon-date">
+					<input type="text" value="日期选择">
+					<span class="icon"></span>
 				</div>
+				<span>-</span>
+				<div class="tl-input-icon tl-icon-date tl-place">
+					<input type="text" value="日期选择">
+					<span class="icon"></span>
+				</div>
+				<span>金额范围：</span>
+				<div class="tl-input-icon tl-icon-money">
+					<input type="text" value="金额输入">
+					<span class="icon"></span>
+				</div>
+				<span>-</span>
+				<div class="tl-input-icon tl-icon-money">
+					<input type="text" value="金额输入">
+					<span class="icon"></span>
+				</div>
+				<a href="" class="oran_button_xs">筛选</a>
+			</div>
+
+			<div class="tl-result">
+				<table class="tl-conclusion">
+					<tbody>
+						<tr>
+							<td><span>充值</span></td>
+							<td>下单笔数：<span>12</span></td>
+							<td>总交易金额：<span>29,709元</span></td>
+						</tr>
+					</tbody>
+				</table>
+				<table class="tl-detail">
+					<tbody>
+						<tr>
+							<th>时间</th>
+							<th>类型交易单号</th>
+							<th>交易对方</th>
+							<th>金额（元）</th>
+						</tr>
+						<tr><td colspan='4'><span>暂无交易</span></td></tr>
+					</tbody>
+				</table>
 			</div>
 		</div>
 	</div>
+	<include file="Public:footer" />
 </body>
 </html>
