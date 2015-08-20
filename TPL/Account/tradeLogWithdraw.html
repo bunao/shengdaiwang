@@ -1,0 +1,303 @@
+<?php
+require_once '../include.php';
+checkLoginedUser();
+
+
+$pageSize = 5;
+$page = ! empty($_REQUEST['page']) ? intval($_REQUEST['page']) : 1;
+$rows =  getWithdrawByPage($page, $pageSize);
+?>
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<link rel="icon" type="image/png" href="../img/logo.png">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta http-equiv="CACHE-CONTROL" content="NO-CACHE">
+		<meta content="telephone=no" name="format-detection">
+		<title>交易记录|盛代网</title>
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<link href="css/style.css" rel="stylesheet">
+		<!--[if lt IE 9]>
+	<link href="/css/ie.css" rel="stylesheet"/>
+<![endif]-->
+		<style type="text/css"></style>
+	</head>
+
+	<body>
+		<iframe src="javascript:false;" style="display: none;"></iframe>
+
+		<!--header-nav-->
+		<div class="nav-bd">
+			<div class="nav-con">
+				<div class="nav-top clearfix">
+					<ul class="nav-left-bd clearfix">
+						<li class="service clearfix">
+							<span style="float:left;margin-left:-60px;">客服热线：</span>
+							<div style="flaot:left">
+								<strong class="ser-tel" style="display:block;line-height:40px;text-align:center;">（工作日时间：9:00-18:00）:2190929/4008501896</strong>
+
+							</div>
+
+						</li>
+
+					</ul>
+					<div class="nav-right-bd">
+						<a class="help-center" href="../help/help.php">帮助中心</a>
+
+						<!--登录之后状态-->
+						<?php if($_SESSION['loginFlag']):?>
+						
+					<div class="logged-box clearfix">
+						<span class="logged-name"><span>您好！</span> <var>
+								<a href="index.php"><?php echo $_SESSION['username'];?></a>
+							</var> </span> <a class="quit" id="js-quit"
+							href="../doAction.php?act=userOut">[退出]</a>
+					</div>
+						 
+                   <?php endif;?>
+
+					</div>
+				</div>
+			</div>
+			<div class="menu-bd clearfix">
+				<div class="logo">
+					<h1>
+
+
+
+						<a href="../index.php">
+
+
+
+						<img src="../images/logo.png" alt="盛贷网"></a>
+
+
+
+					</h1>
+				</div>
+				<ol class="menu-left">
+					<li><a href="../index.php" target="_blank">首页</a>
+					</li>
+					<li><a href="../lend.php" target="_blank">我要出借</a>
+					</li>
+					<li><a href="../safe.php" target="_blank">安全保障</a>
+					</li>
+					<li><a href="../zhinan.php" target="_blank">新手指南</a>
+					</li>
+					<li>
+						<a href="../about/about.php" target="_blank">关于我们</a>
+					</li>
+				</ol>
+			</div>
+
+		</div>
+		<div class="account-main">
+			<h2 class="acc-head">我的账户</h2>
+
+			<!--主体内容-->
+			<div class="acc_wrap clearfix">
+				<!--左边导航栏通用-->
+				<div class="left-side-bar">
+					<div class="mine-account">
+						<h3 class="acc-title">我的账户</h3>
+						<ul class="acc-item">
+							<li><a class="acc-overview" href="index.php">账户总览</a>
+							</li>
+							<li><a class="acc-safe" href="securityCenter.php">安全中心</a>
+							</li>
+							<li><a class="acc-trrecord acc-item-on" href="tradeLog.php">交易记录</a>
+							</li>
+							<li><a class="acc-pay" href="recharge.php">充值提现</a>
+							</li>
+							<li><a class="acc-bank" href="bankCards.php">银行卡管理</a>
+							</li>
+						</ul>
+					</div>
+					<div class="mine-account">
+						<h3 class="acc-title">我的出借</h3>
+						<ul class="acc-item">
+							<li><a class="inrecord" href="investLog.php">出借记录</a>
+							</li>
+							<li><a class="agree" href="protocol.php">协议管理</a>
+							</li>
+						</ul>
+					</div>
+					<div class="mine-account">
+						<h3 class="acc-title">我的奖励</h3>
+						<ul class="acc-item">
+							<li><a class="acc-red" href="myVoucher.php">我的红包</a>
+							</li>
+							<li><a class="wealth-plan" href="yaoqing.php">邀请好友</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!--右边主内容-->
+				<div class="right-side-con">
+					<h3 class="con-title">
+
+          交易记录
+
+        </h3>
+					<!--交易内容-->
+					<div class="person-wrap">
+						<div class="bank-wrap clearfix">
+							<div class="trade-top">
+								<div class="trade-wrap clearfix" id="tradeType">
+									<span class="trade-total">交易类型</span>
+									<div class="trade-more" data-type="-2">
+										<div class="trade-more-box clearfix"><span class="trade-more-left">更多</span><i class="trade-more-right trade-more-none"></i>
+										</div>
+										<ul class="more-trade-tab" id="js-more-trade">
+											<li data-type="3">出借</li>
+											<li data-type="4">收益</li>
+											<li data-type="5">奖励</li>
+											<li data-type="6">退款</li>
+											<li data-type="12">提现资金冻结</li>
+											<li data-type="13">提现资金解冻</li>
+											<li data-type="14">提现复核通过</li>
+											<li data-type="15">活期通转入</li>
+											<li data-type="16">活期通转出</li>
+											<li data-type="17">逾期还款</li>
+											<li data-type="18">线下充值</li>
+										</ul>
+									</div>
+									<ul class="trade-tab clearfix" id="js-trade-tab">
+										<li  class="chazhao" data-type=""><a href="tradeLog.php">全部</a></li>
+										<li  class="chazhao"><a href="tradeLogRecharge.php">充值</a></li>
+										<li  class="select-show" ><a href="tradeLogWithdraw.php">提现</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="trade-mid clearfix" id="tr-condition">
+								<a class="check" href="javascript:;" style="display:none">查看统计</a>
+								<div class="higher-con" id="js-high-select">
+									<span>更多条件</span>
+									<div class="high-detail clearfix">
+										<i class="slice"></i>
+										<div class="select-date clearfix">
+											<label for="start-date" class="date-range">起止日期</label>
+											<div class="input-append date start-date">
+												<span class="add-on"><i class="icon-th"></i></span>
+												<input class="span2" id="beginDate" size="16" type="text" value="" readonly="">
+												<i class="clear-btn"></i>
+											</div>
+											<span class="date-to">-</span>
+											<div class="input-append date end-date">
+												<span class="add-on"><i class="icon-th"></i></span>
+												<input class="span2" id="endDate" size="16" type="text" value="" readonly="">
+												<i class="clear-btn"></i>
+											</div>
+										</div>
+										<div class="select-money clearfix">
+											<var>金额范围</var>
+											<div class="money-top">
+												<input id="js-min-money" class="js-show-m" type="text" value="">
+												<i class="clear-btn1"></i>
+												<span>-</span>
+												<input id="js-max-money" class="js-show-m" type="text" value="">
+												<i class="clear-btn2"></i>
+												<i>元</i>
+												<em class="id-error">输入金额不正确</em>
+											</div>
+										</div>
+										<input class="more-select" type="button" value="筛选">
+									</div>
+								</div>
+								<div class="trade-dura">
+									<select class="chzn-select" id="period">
+										<option value="7">最近7天</option>
+										<option value="14">最近14天</option>
+										<option value="30">最近30天</option>
+										<option value="" selected="">不限</option>
+									</select>
+								</div>
+							</div>
+							<div class="tr-result" id="tradeLogResult">
+								<!-- 分页显示记录 -->
+								<!-- 当筛选条件是全部的时候隐藏table，其他条件都显示-->
+								<table id="tradeLogTb">
+									
+										<tr>
+											<th width="150">时间</th>
+											<th width="200">类型|交易单号</th>
+											<th width="300">交易对方</th>
+											<th width="130">金额（元）</th>
+										</tr>
+										<?php if ($rows) {?>
+										<?php foreach($rows as $row):?>
+										
+										<tr class="con-gray">
+											<td class="no-record"><?php echo date("Y-m-d", $row['time']);?></td>											
+											<td class="no-record"><?php echo $row['leixing'];?></td>	
+											<td class="no-record"><?php echo $row['jiaoyifang'];?></td>					
+											<td class="no-record"><?php echo $row['money'];?></td>
+									</tr>
+										 <?php  endforeach;?>
+										
+											<?php }else{ ?>
+                        
+										<tr rel="dynamic" class="con-gray">
+											<td colspan="4" class="no-record">暂无交易记录</td>
+										</tr>
+                                       <?php }?>
+											
+										
+									 <?php if($totalRows>$pageSize):?>
+                            <tr>
+                            	<td colspan="7"><?php echo showPage($page, $totalPage,"keywords={$keywords}&order={$order}");?></td>
+                            </tr>
+								  <?php endif;?>	
+										
+									
+								</table>
+							
+							</div>
+						</div>
+						<!--温馨提示在充值、提现和银行卡里通用-->
+						<dl class="sec-tip">
+							<dt>备注：</dt>
+							<dd>
+								<p style="line-height: 1.5em;"><span style="font-family: 微软雅黑, &#39;Microsoft YaHei&#39;;">交易记录不包括红包使用，真实出借明细请以出借记录页面为准。</span>
+								</p>
+							</dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<!--footer-->
+		<div class="footer">
+			<div class="footer_main clearfix">
+				<div class="footer_left">
+					<div class="footer_nav">
+						<a href="../about/about.php">关于我们</a>
+						<a href="../help/help.php">帮助中心</a>
+						<a href="../zhinan.php">新手指南</a>
+						<a href="../about/join.php">加入我们</a>
+						<a href="../about/contact.php">联系我们</a>
+
+					</div>
+					<div class="copyright">Copyright ©2015盛贷网</div>
+
+				</div>
+				<div class="footer_right">
+					<ul>
+						<li class="right_1">客服热线（工作日时间：9:00-18:00）</li>
+						<li class="right_2">2190929/4008501896</li>
+
+						<li class="right_1">QQ:3248537223
+							<br>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>

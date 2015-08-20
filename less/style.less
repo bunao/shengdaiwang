@@ -1,9 +1,9 @@
 @charset"utf-8";
-
+@import url(functs.less);
 /*----------------样式初始化-------------------*/
 
 body,ul,ol,li,dl,dt,dd,p,h1,h2,h3,h4,h5,h6,form,fieldset,table,td,img,div,span,a{margin:0;padding:0;border:0;}
-body{ position:relative;background:#fff; color:black; font-size:14px; margin:0px; font-family: "Microsoft YaHei","Hiragino Sans GB","WenQuanYi Micro Hei", sans-serif; }
+body{ cursor: default; position:relative;background:#fff; color:black; font-size:14px; margin:0px; font-family: @fontfamily; }
 ul{list-style-type:none;}
 select,input,img,select{vertical-align:middle;}
 h1,h2,h3,h4,h5{ font-weight: normal; } 
@@ -25,44 +25,6 @@ input, button, select, textarea { outline:none; }
 
 .clear{ clear: both; }
 
-
-
-.fl(l){
-	float: left;
-}
-
-.fl(r){
-	float: right;
-}
-
-//参数儿们
-
-@maxwidth: 1016px;
-@default_blue:#2b6ab8;
-@bg_grey:#f8f8f8;
-
-.fwhite(){
-	color: #fff;
-}
-.fgrey1(){
-	color: #757575;//浅灰字
-}
-.fgrey2(){
-	color: #5d5d5d;//深灰字
-}
-.ft(@fontsize){
-	font-size: @fontsize;
-}
-
-.icons(@w,@h,@pw,@ph){
-	width: @w;
-	height: @h;
-	font-size: 0;
-	vertical-align: middle;
-	display: inline-block;
-	background: url(../images/icons.png) no-repeat;
-	background-position: @pw @ph;
-}
 
 
 /*----==============header==============----*/
@@ -210,10 +172,61 @@ input, button, select, textarea { outline:none; }
 	}
 }
 
-
+/*----==============buttons==================----*/
+.oran_button_xs{
+	.button(61px,22px,4px,@default_oran,14px,-94px,-160px);
+}
+.oran_button_s{
+	.button(82px,22px,4px,@default_oran,14px,0,-160px);
+}
+.oran_button_m{
+	.button(80px,29px,4px,@default_oran,16px,0,-188px);
+}
+.oran_button_l{
+	.button(114px,32px,5px,@default_oran,20px,0,0);
+}
+.blue_button_l{
+	.button(188px,48px,7px,@default_blue,22px,0,-40px);
+}
+.blue_button_square{
+	.button(154px,44px,0,@default_blue,22px,-200px,-40px);
+}
 
 /*----==============container==============----*/
 .container{
 	width: @maxwidth;
 	margin: 0 auto;
 }
+/*----==============about-bread==============----*/
+div.about-bread{
+	width: 100%;
+	height: 40px;
+	background-color: @default_blue;
+	.wrapper{
+  	width: @maxwidth;
+  	margin: 0 auto;
+  	font-size: 16px;
+  	line-height: 40px;
+  }
+  .bread-target{
+  	.fwhite();
+  	margin-right: 35px;
+  }
+  .current{
+  	position: relative;
+  	&:after{
+  		content: "";
+  		display: inline-block;
+  		position: absolute;
+  		top: 17px;
+  		left: 50%;
+  		margin-left: -7px;
+  		width: 0;
+  		height: 0;
+  		border-color: transparent transparent #fff transparent;
+  		border-style: dashed dashed solid dashed;
+  		border-width: 7px;  
+  	}
+  }
+}
+

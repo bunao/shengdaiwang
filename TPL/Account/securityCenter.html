@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+	    <link rel="icon" type="image/png" href="../img/logo.png">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta http-equiv="CACHE-CONTROL" content="NO-CACHE">
+		<meta content="telephone=no" name="format-detection">
+		<title>安全中心|盛贷网</title>
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+
+		<link href="../../css/style.css" rel="stylesheet">
+		<link href="../../css/account.css" rel="stylesheet">
+
+		<!--[if lt IE 9]>
+	<link href="/css/ie.css" rel="stylesheet"/>
+<![endif]-->
+	</head>
+
+	<body>
+
+		<include file="Public:header" />
+		
+		<div class="about-bread">
+			<div class="wrapper">
+				<a href="" class="bread-target">首页</a>
+				<a href="" class="bread-target">我要出借</a>
+				<span class="bread-target current">项目信息介绍</span>
+			</div>
+		</div>
+		<!--主体内容-->
+		<div class="container">
+
+				<!--左边导航栏通用-->
+				<include file="Public:left-side-bar" />
+
+				<!--右边主内容-->
+				<div class="right-side-box">
+					<h2>安全中心</h2>
+					<!--安全中心信息-->
+					<div class="security">
+						<div class="secure-level">
+							<p>你的账号安全级别为<span class="processbar high">高</span><span class="advice">建议定期修改密码保障账号安全</span></p>
+						</div>
+						<!--已完成的保护-->
+						<table class="protected-wrap">
+							<tr class="protected-item clearfix">
+								<td class="realname certificated" width="126px"><span class="icon well">icon</span>登录密码</td>
+								<td class="real-con" width="520px">建议您定期更改登录密码以保护账户安全 </td>
+								<td class="operate"><a href="#">修改</a></td>
+								
+							</tr>
+							<tr class="realname-wrap clearfix">
+								<td class="realname js-namecer "><span class="icon well">icon</span>实名认证</td>
+								<td class="real-con">您尚未启用实名认证，充值/投资前，须完成实名认证</td>
+								<td class="operate"><a href="#">查看</a></td>
+								
+							</tr>
+							<tr class="protected-item clearfix">
+								<td class="realname js-phonecer "><span class="icon well">icon</span>绑定手机</td>
+								<td class="real-con">充值/投资前须绑定手机，绑定手机可用于账号及支付密码找回</td>
+								<td class="operate"><a href="#">修改</a></td>
+								
+							</tr>
+							<tr class="applypassword">
+								<td class="realname js-passcer "><span class="icon bad">icon</span>支付密码</td>
+								<td class="real-con js-unpass">安全等级<span class="processbar"> </span><span class="advice">建议您设置更高强度密码</span></td>
+								<td class="operate"><a href="#">修改</a><a href="#">找回</a></td>								
+							</tr>
+							<tr>
+								<td class="realname js-mailcer certificated"><span class="icon well">icon</span>邮箱验证</td>
+								<td class="real-con">为了您的账户安全，请绑定邮箱</td>
+								<td class="operate"><a href="#">修改</a></td>
+								
+							</tr>
+			
+							<!--  密保问题   -->
+							<tr class="protected-item clearfix">
+								<td class="realname js-pwd-protect "><span class="icon well">icon</span>密保问题</td>
+								<td class="real-con">密保信息是个人身份的有效凭证，帮助您快速找回支付密码</td>
+								<td class="operate"><a href="#">设置</a></td>
+							</tr>
+							
+						</table>
+						
+					</div>
+					<!--安全提示在安全中心中通用-->
+					<div class="sec-tip">
+						<p>安全提示：</p>
+						<p><span>1. 建议您安装杀毒软件，并定期更新操作系统等软件补丁，确保账户及交易安全；</span>
+						</p>
+						<p><span>2. 进行充值/投资活动前，需要先完成手机绑定，实名认证及支付密码的设置。</span>
+						</p>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<!--footer-->
+		<include file="Public:footer" />
+		
+	</body>
+
+</html>

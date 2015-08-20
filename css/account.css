@@ -1,0 +1,373 @@
+@charset "utf-8";
+.icon {
+  font-size: 0;
+  vertical-align: middle;
+  display: inline-block;
+  background: url(../images/icons.png) no-repeat;
+}
+/*----==============account-sidebar==============----*/
+.left-side-bar {
+  width: 140px;
+  margin: 15px 0;
+  float: left;
+  /* li hover span*/
+}
+.left-side-bar a {
+  font-size: 14px;
+  color: #5d5d5d;
+}
+.left-side-bar h3 {
+  font-size: 14px;
+  margin: 15px 0 10px;
+  color: #5d5d5d;
+}
+.left-side-bar ul {
+  list-style: none;
+  border: 1px solid #f9f9f9;
+}
+.left-side-bar li {
+  height: 30px;
+  line-height: 33px;
+  border-top: 1px solid #f9f9f9;
+  border-bottom: 3px solid transparent;
+  padding-left: 30px;
+  cursor: pointer;
+}
+.left-side-bar li:hover {
+  background-color: #f8f8f8;
+}
+.left-side-bar li.acc-item-on {
+  background-color: #2b6ab8;
+  border-bottom: 3px solid #10428b;
+}
+.left-side-bar li.acc-item-on a {
+  color: #fff;
+}
+.left-side-bar span {
+  margin-right: 3px;
+  margin-top: -3px;
+}
+.left-side-bar li.acc-overview span {
+  width: 14px;
+  height: 14px;
+  background-position: -45px -40px;
+}
+.left-side-bar li.acc-safe span {
+  width: 14px;
+  height: 14px;
+  background-position: -61px -40px;
+}
+.left-side-bar li.acc-trrecord span {
+  width: 14px;
+  height: 14px;
+  background-position: -77px -40px;
+}
+.left-side-bar li.acc-pay span {
+  width: 14px;
+  height: 14px;
+  background-position: -93px -40px;
+}
+.left-side-bar li.acc-bank span {
+  width: 14px;
+  height: 14px;
+  background-position: -109px -40px;
+}
+.left-side-bar li.acc-inrecord span {
+  width: 14px;
+  height: 14px;
+  background-position: -45px -72px;
+}
+.left-side-bar li.acc-agree span {
+  width: 14px;
+  height: 14px;
+  background-position: -61px -72px;
+}
+.left-side-bar li.acc-overview.acc-item-on span {
+  width: 14px;
+  height: 14px;
+  background-position: -45px -56px;
+}
+.left-side-bar li.acc-safe.acc-item-on span {
+  width: 14px;
+  height: 14px;
+  background-position: -61px -56px;
+}
+.left-side-bar li.acc-trrecord.acc-item-on span {
+  width: 14px;
+  height: 14px;
+  background-position: -77px -56px;
+}
+.left-side-bar li.acc-pay.acc-item-on span {
+  width: 14px;
+  height: 14px;
+  background-position: -93px -56px;
+}
+.left-side-bar li.acc-bank.acc-item-on span {
+  width: 14px;
+  height: 14px;
+  background-position: -109px -56px;
+}
+.left-side-bar li.acc-inrecord.acc-item-on span {
+  width: 14px;
+  height: 14px;
+  background-position: -45px -88px;
+}
+.left-side-bar li.acc-agree.acc-item-on span {
+  width: 14px;
+  height: 14px;
+  background-position: -61px -88px;
+}
+/*----==============right-side-box==============----*/
+.right-side-box {
+  width: 820px;
+  float: right;
+}
+/*----==============index.html==============----*/
+.person-top {
+  height: 80px;
+  width: 100%;
+  background-color: #f8f8f8;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  padding: 14px 100px 0 34px;
+  position: relative;
+  margin-bottom: 14px;
+}
+.person-top .greet {
+  color: #f6af46;
+  line-height: 26px;
+}
+.person-top .last-login {
+  color: #5d5d5d;
+  line-height: 26px;
+}
+.person-top .secure-level {
+  position: absolute;
+  bottom: 20px;
+  right: 100px;
+}
+.person-top .secure-level .processbar {
+  margin-left: 10px;
+}
+.person-top .secure-level a {
+  color: #2b6ab8;
+}
+.person-main {
+  height: 270px;
+  background-color: #f8f8f8;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  padding: 16px 34px;
+  color: #5d5d5d;
+}
+.person-main .per-assets {
+  float: left;
+}
+.person-main .per-balance {
+  float: left;
+  margin-left: 320px;
+}
+.person-main .total-income {
+  line-height: 30px;
+}
+.person-main .total-num {
+  line-height: 60px;
+}
+.person-main .total-num span {
+  font-size: 45px;
+  margin-right: 5px;
+}
+.person-main .assets-list {
+  margin-top: 10px;
+}
+.person-main .assets-list li {
+  height: 30px;
+  line-height: 30px;
+}
+.person-main .assets-list span {
+  margin: -4px 4px 0 0;
+}
+.person-main .assets-list span[data-assets-list="ben"] {
+  width: 18px;
+  height: 18px;
+  background-position: -109px -16px;
+}
+.person-main .assets-list span[data-assets-list="shou"] {
+  width: 18px;
+  height: 18px;
+  background-position: -129px -16px;
+}
+.person-main .assets-list span[data-assets-list="dong"] {
+  width: 18px;
+  height: 18px;
+  background-position: -149px -16px;
+}
+.person-main .assets-list span[data-assets-list="jiang"] {
+  width: 18px;
+  height: 18px;
+  background-position: -169px -16px;
+}
+.account-trade {
+  margin-top: 24px;
+}
+.account-trade .repayment {
+  width: 440px;
+  float: left;
+}
+.account-trade .trrecord {
+  width: 354px;
+  float: right;
+}
+.account-trade .record-name span {
+  color: #5d5d5d;
+  font-size: 22px;
+}
+.account-trade .record-name a {
+  float: right;
+}
+.account-trade .record-detail {
+  color: #5d5d5d;
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 10px;
+}
+.account-trade .record-detail th,
+.account-trade .record-detail td {
+  padding: 0 4px;
+}
+.account-trade .record-detail thead th {
+  font-size: 14px;
+  font-weight: normal;
+  background: #eeeeee;
+  height: 49px;
+}
+.account-trade .record-detail thead th:last-child {
+  line-height: 24px;
+}
+.account-trade .record-detail tbody td {
+  background: #f8f8f8;
+  height: 42px;
+  border-bottom: 1px solid #eeeeee;
+}
+.account-trade .record-detail tbody td:last-child {
+  border-bottom: none;
+}
+/*----==============securityCenter.html==============----*/
+.security {
+  color: #757575;
+  width: 100%;
+  height: 330px;
+  background-color: #f8f8f8;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  padding: 25px 44px;
+}
+.security .secure-level {
+  height: 30px;
+  line-height: 30px;
+  margin-bottom: 14px;
+}
+.security .secure-level .processbar {
+  margin: 0 10px;
+  display: inline-block;
+  position: relative;
+  height: 30px;
+  line-height: 30px;
+}
+.security .secure-level .processbar:before {
+  content: " ";
+  display: inline-block;
+  width: 230px;
+  height: 10px;
+  background-color: #cbcbcb;
+  border-radius: 5px;
+  position: relative;
+  margin-right: 5px;
+}
+.security .secure-level .processbar:after {
+  content: " ";
+  display: inline-block;
+  width: 0;
+  height: 10px;
+  background-color: #42b518;
+  border-radius: 5px;
+  position: absolute;
+  left: 0;
+  top: 10px;
+}
+.security .secure-level .processbar.high {
+  color: #42b518;
+}
+.security .secure-level .processbar.high:after {
+  width: 160px;
+  background: #42b518 url(../images/buttons.png) no-repeat 0 -290px;
+}
+.security .secure-level .advice {
+  color: red;
+}
+.protected-wrap .icon {
+  margin-right: 5px;
+  margin-top: -3px;
+}
+.protected-wrap .icon.well {
+  width: 14px;
+  height: 14px;
+  background-position: -80px 0;
+}
+.protected-wrap .icon.bad {
+  width: 14px;
+  height: 14px;
+  background-position: -97px 0;
+}
+.protected-wrap tr {
+  height: 36px;
+}
+.protected-wrap .applypassword .processbar {
+  display: inline-block;
+  position: relative;
+  height: 36px;
+  line-height: 36px;
+  margin: 0 10px;
+}
+.protected-wrap .applypassword .processbar:before {
+  content: " ";
+  display: inline-block;
+  width: 120px;
+  height: 10px;
+  background-color: #cbcbcb;
+  border-radius: 5px;
+  position: relative;
+  margin-right: 5px;
+}
+.protected-wrap .applypassword .processbar:after {
+  content: " ";
+  display: inline-block;
+  width: 0;
+  height: 10px;
+  background-color: #ff4102;
+  border-radius: 5px;
+  position: absolute;
+  left: 0;
+  top: 13px;
+}
+.protected-wrap .operate a {
+  text-decoration: underline;
+  margin: 0 6px;
+  color: #757575;
+}
+.sec-tip {
+  background: #f8f8f8;
+  padding: 10px 44px 26px;
+  margin: 20px 0;
+}
+.sec-tip p {
+  color: #757575;
+  line-height: 24px;
+}
+.sec-tip p:first-child {
+  font-size: 16px;
+  line-height: 40px;
+}

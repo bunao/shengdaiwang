@@ -1,0 +1,185 @@
+	  
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<link rel="icon" type="image/png" href="../img/logo.png">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta http-equiv="CACHE-CONTROL" content="NO-CACHE">
+		<meta content="telephone=no" name="format-detection">
+		<title>账户总览|盛贷网</title>
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<link rel="icon" type="image/png" href="../img/logo.png">
+
+		<link href="../../css/style.css" rel="stylesheet"/>
+		<link href="../../css/account.css" rel="stylesheet"/>
+
+		<!--[if lt IE 9]>
+		<link href="/css/ie.css" rel="stylesheet"/>
+		<![endif]-->
+	</head>
+
+	<body>
+
+
+		<!--header-->
+
+		<include file="Public:header" />
+		
+		<div class="about-bread">
+			<div class="wrapper">
+				<a href="" class="bread-target">首页</a>
+				<a href="" class="bread-target">我要出借</a>
+				<span class="bread-target current">项目信息介绍</span>
+			</div>
+		</div>
+
+		<!--主体内容-->
+		<div class="container">
+			<!--左边导航栏通用-->
+				<include file="Public:left-side-bar" />
+				
+				
+
+				<!--右边主内容-->
+				<div class="right-side-box">
+					<h2>账户总览</h2>
+					<!--个人账户信息-->
+					<div class="person-wrap">
+						<!--基本信息-->
+						<div class="person-top clearfix">
+							<div class="base-inform">
+								<div class="greet">
+									<p>下午好，<span>NAME</span></p>
+								</div>
+								<div class="last-login">
+									<p>上次登录时间：2015.08.12 14:25:32</p>
+								</div>
+								<div class="secure-level">安全等级<span class="processbar"></span><a href="#">查看</a></div>
+							</div>
+						</div>
+
+						<!--账户-->
+						<div class="person-main clearfix">
+							<div class="per-assets">
+								<div class="assets-box clearfix">
+									<p class="total-income">盛贷网累计收益：</p>
+									<p class="total-num"><span class="js-show-m">29,709</span>元</p>
+								</div>
+								<ul class="assets-list">
+									<li><span class="icon" data-assets-list="ben">本</span>代收本金:29,709元</li>
+									<li><span class="icon" data-assets-list="shou">收</span>代收收益:29,709元</li>
+									<li><span class="icon" data-assets-list="dong">冻</span>冻结金额:29,709元</li>
+									<li><span class="icon" data-assets-list="jiang">奖</span>累计奖金:29,709元</li>
+									
+								</ul>
+							</div>
+							<div class="per-balance">
+								<p class="total-income">盛贷网账户余额</p>
+								<p class="total-num"><span class="js-show-m">29,709</span>元</p>
+								<div class="clearfix">
+									<a class="oran_button_m" href="recharge.php">充值</a>
+									<a class="oran_button_m" href="withdraw.php">提现</a>
+								</div>
+							</div>
+						</div>
+						<!--显示最近5条的还款计划和交易记录-->
+						<!--交易总览start -->
+						<div class="account-trade clearfix">
+							<div class="repayment">
+								<!-- 还款计划start -->
+								<div class="record-name clearfix">
+									<span>还款计划</span>
+									<a href="investLog.php" target="_blank" class="oran_button_s">查看详情</a>
+								</div>
+								<table class="record-detail">
+									<thead>
+										<tr>
+											<th width="127" class="record-detail-title">项目名</th>
+											<th width="112" class="record-detail-title">还款日</th>
+											<th width="127" class="record-detail-title">
+												<div>还款类型&nbsp;&nbsp;/&nbsp;</div>
+												<div>金额（元）</div>
+											</th>
+										</tr>
+									</thead>	
+									<tbody>
+										<!--如果有还款计划，显示最新五条-->
+										<tr>
+											<td> </td>
+											<td> </td>
+											<td> </td>
+										</tr>
+										<tr>
+											<td> </td>
+											<td> </td>
+											<td> </td>
+										</tr>
+										<tr>
+											<td> </td>
+											<td> </td>
+											<td> </td>
+										</tr>
+										<!--如果没有内容-->
+										<!-- <tr rel="dynamic">
+											<td colspan="3" class="no-record">暂无还款计划</td>
+										</tr> -->
+									</tbody>
+								</table>
+							</div>
+							<!-- 还款计划end -->
+							<div class="trrecord">
+								<!-- 交易记录start -->
+								<div class="record-name clearfix">
+									<span>近期交易</span>
+									<a href="tradeLog.php" target="_blank" class="oran_button_s">查看详情</a>
+								</div>
+								<table class="record-detail">
+									<thead>
+										<tr>
+											<th width="130" class="record-detail-title">时间</th>
+											<th width="120" class="record-detail-title">类型</th>
+											<th width="108" class="record-detail-title">金额（元）</th>
+										</tr>
+									</thead>
+									<tbody>
+
+										<tr>
+											<td> </td>
+											<td> </td>
+											<td> </td>
+										</tr>
+										<tr>
+											<td> </td>
+											<td> </td>
+											<td> </td>
+										</tr>
+										<tr>
+											<td> </td>
+											<td> </td>
+											<td> </td>
+										</tr>
+										</tr>
+										<!-- <tr>
+											<td colspan="3" class="no-record">暂无交易记录</td>
+										</tr> -->
+									</tbody>
+								</table>
+							</div>
+							<!-- 交易记录end -->
+						</div>
+						<!-- 交易总览end -->
+					</div>
+				</div>
+
+
+		</div>
+
+
+		<!--footer-->
+
+		<include file="Public:footer" />
+	</body>
+
+</html>						   
