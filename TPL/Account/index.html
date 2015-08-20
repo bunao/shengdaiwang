@@ -1,22 +1,5 @@
-<?php
-require_once '../include.php';
-checkLoginedUser();
-
-$username=$_SESSION['username'];
-$pageSize = 5;
-$page = ! empty($_REQUEST['page']) ? intval($_REQUEST['page']) : 1;
-$rows = getLendByPage($page, $pageSize);
-
-$leixing='出借';
-$sqld = "select * from com_account where username='$username' and leixing='$leixing' ";
-$rowsd = fetchAll($sqld);
-
-$sqle="select * from  com_account where id in (select max(id) from com_account where username='{$username}')";
-$rowse = fetchAll($sqle);
-?>
-						  
-		<html>
-
+	  
+<html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<link rel="icon" type="image/png" href="../img/logo.png">
@@ -28,231 +11,78 @@ $rowse = fetchAll($sqle);
 		<meta name="description" content="">
 		<meta name="keywords" content="">
 		<link rel="icon" type="image/png" href="../img/logo.png">
-		<!-- <link href="../css/style.css" /> -->
-		<link href="css/style.css" rel="stylesheet">
+
+		<link href="../../css/style.css" rel="stylesheet"/>
+		<link href="../../css/account.css" rel="stylesheet"/>
+
 		<!--[if lt IE 9]>
-	<link href="/css/ie.css" rel="stylesheet"/>
-<![endif]-->
+		<link href="/css/ie.css" rel="stylesheet"/>
+		<![endif]-->
 	</head>
 
 	<body>
-		<iframe src="javascript:false;" style="display: none;"></iframe>
 
-		<!--header-nav-->
-		<div class="nav-bd">
-			<div class="nav-con">
-				<div class="nav-top clearfix">
-					<ul class="nav-left-bd clearfix">
-						<li class="service clearfix">
-							<span style="float:left;margin-left:-60px;">客服热线：</span>
-							<div style="flaot:left">
-								<strong class="ser-tel" style="display:block;line-height:40px;text-align:center;">（工作日时间：9:00-18:00）:2190929/4008501896</strong>
 
-							</div>
+		<!--header-->
 
-						</li>
-
-					</ul>
-					<div class="nav-right-bd">
-						<a class="help-center" href="../help/help.php">帮助中心</a>
-
-						<!--登录之后状态-->
-						
-						
-						<?php if($_SESSION['loginFlag']):?>
-						
-					<div class="logged-box clearfix">
-							<span class="logged-name"><span>您好！</span><var><a href="index.php"><?php echo $_SESSION['username'];?></a></var>
-							</span>
-							<a class="quit" id="js-quit" href="../doAction.php?act=userOut">[退出]</a>
-						</div>
-						
-                   <?php endif;?>
-
-					</div>
-				</div>
+		<include file="Public:header" />
+		
+		<div class="about-bread">
+			<div class="wrapper">
+				<a href="" class="bread-target">首页</a>
+				<a href="" class="bread-target">我要出借</a>
+				<span class="bread-target current">项目信息介绍</span>
 			</div>
-			<div class="menu-bd clearfix">
-				<div class="logo">
-					<h1>
-
-						<a href="../index.php">
-
-						<img src="../images/logo.png" alt="盛贷网"></a>
-
-					</h1>
-				</div>
-				<ol class="menu-left">
-					<li><a href="../index.php" target="_blank">首页</a>
-					</li>
-					<li><a href="../lend.php" target="_blank">我要出借</a>
-					</li>
-					<li><a href="../safe.php" target="_blank">安全保障</a>
-					</li>
-					<li><a href="../zhinan.php" target="_blank">新手指南</a>
-					</li>
-					<li>
-						<a href="../about/about.php" target="_blank">关于我们</a>
-					</li>
-				</ol>
-			</div>
-
 		</div>
-		<div class="account-main">
-			<h2 class="acc-head">我的账户</h2>
-			
-			<!--主体内容-->
-			<div class="acc_wrap clearfix">
-				<!--左边导航栏通用-->
-				<div class="left-side-bar">
-					<div class="mine-account">
-						<h3 class="acc-title">我的账户</h3>
-						<ul class="acc-item">
-							<li><a class="acc-overview acc-item-on" href="index.php">账户总览</a>
-							</li>
-							<li><a class="acc-safe" href="securityCenter.php">安全中心</a>
-							</li>
-							<li><a class="acc-trrecord" href="tradeLog.php">交易记录</a>
-							</li>
-							<li><a class="acc-pay" href="recharge.php">充值提现</a>
-							</li>
-							<li><a class="acc-bank" href="bankCards.php">银行卡管理</a>
-							</li>
-						</ul>
-					</div>
-					<div class="mine-account">
-						<h3 class="acc-title">我的出借</h3>
-						<ul class="acc-item">
-							<li><a class="inrecord" href="investLog.php">出借记录</a>
-							</li>
-							<li><a class="agree" href="protocol.php">协议管理</a>
-							</li>
-						</ul>
-					</div>
-					<div class="mine-account">
-						<h3 class="acc-title">我的奖励</h3>
-						<ul class="acc-item">
-							<li><a class="acc-red" href="myVoucher.php">我的红包</a>
-							</li>
-							<li><a class="wealth-plan" href="yaoqing.php">邀请好友</a>
-							</li>
-						</ul>
-					</div>
-				</div>
+
+		<!--主体内容-->
+		<div class="container">
+			<!--左边导航栏通用-->
+				<include file="Public:left-side-bar" />
+				
+				
+
 				<!--右边主内容-->
-				<div class="right-side-con">
-					<h3 class="con-title">账户总览</h3>
+				<div class="right-side-box">
+					<h2>账户总览</h2>
 					<!--个人账户信息-->
 					<div class="person-wrap">
 						<!--基本信息-->
 						<div class="person-top clearfix">
 							<div class="base-inform">
-								<div>
-									<var class="per-time js-per-time"></var>
-									<em class="per-name">您好：<?php echo $_SESSION['username'];?>！</em><br><br>
-									<em class="per-id">账号码：<?php echo $_SESSION['loginFlag'];?></em>
+								<div class="greet">
+									<p>下午好，<span>NAME</span></p>
 								</div>
-								<div class="last-logon">
-									<var></var>
+								<div class="last-login">
+									<p>上次登录时间：2015.08.12 14:25:32</p>
 								</div>
+								<div class="secure-level">安全等级<span class="processbar"></span><a href="#">查看</a></div>
 							</div>
-							
-							
 						</div>
+
 						<!--账户-->
 						<div class="person-main clearfix">
-							
-							
-							<?php
-                               if($rowsd){
-						
-                              foreach($rowsd as $row):
-	                           $i=$i+$row[shouyi] ?>
-	                      <?php   $a=$a+$row[money] ?>
-			                <?php   $c=$c+$row[jiangjin] ?>
-		                   	<?php  endforeach;?>
-		                   	<ul class="per-assets">
-								<li class="assets-box clearfix">
-									<span class="total-income">盛贷网累计收益：</span><span class="assets-num"><var class="js-show-m"><?php echo $i ;?></var><i>元</i></span>
-								</li>
-								<li class="assets-box2 clearfix">
-									<i class="before-icon asset1">本</i><span class="assets-item">待收本金：<strong class="assets-num2"><var class="js-show-m"><?php echo $a ;?></var>元</strong></span>
-								</li>
-								<li class="assets-box2 clearfix">
-									<i class="before-icon asset2">收</i><span class="assets-item">待收收益 ：<strong class="assets-num2"><var class="js-show-m"><?php echo $i ;?></var>元</strong></span>
-								</li>
-								<li class="assets-box2 clearfix">
-									<i class="before-icon asset3">冻</i><span class="assets-item">冻结金额：<strong class="assets-num2"><var class="js-show-m">0.00</var>元</strong></span>
-								</li>
-								<li class="assets-box2 clearfix">
-									<i class="before-icon asset4">免</i><span class="assets-item">累计奖励：<strong class="assets-num2"><var class="js-show-m"><?php echo $c ;?></var>元</strong></span>
-								</li>
-							</ul>
-							
-							<?php }else{ ?>
-								<ul class="per-assets">
-								<li class="assets-box clearfix">
-									<span class="total-income">盛贷网累计收益：</span><span class="assets-num"><var class="js-show-m">0.00</var><i>元</i></span>
-								</li>
-								<li class="assets-box2 clearfix">
-									<i class="before-icon asset1">本</i><span class="assets-item">待收本金：<strong class="assets-num2"><var class="js-show-m">0.00</var>元</strong></span>
-								</li>
-								<li class="assets-box2 clearfix">
-									<i class="before-icon asset2">收</i><span class="assets-item">待收收益 ：<strong class="assets-num2"><var class="js-show-m">0.00</var>元</strong></span>
-								</li>
-								<li class="assets-box2 clearfix">
-									<i class="before-icon asset3">冻</i><span class="assets-item">冻结金额：<strong class="assets-num2"><var class="js-show-m">0.00</var>元</strong></span>
-								</li>
-								<li class="assets-box2 clearfix">
-									<i class="before-icon asset4">免</i><span class="assets-item">累计奖励：<strong class="assets-num2"><var class="js-show-m">0.00</var>元</strong></span>
-								</li>
-							</ul>
-							<?php } ?>
-							
-							<?php
-                               if($rowse){?>
-						<?php
-                           foreach($rowse as $row):?>
-	                   
-	                    
-		                   
-							<ul class="per-balance">
-								<li class="balance-item1">
-									<span class="total-income">盛贷网账户余额</span>
-									<div class="balance-num clearfix">
-										<strong class="balance-before-num">
-				 				
-
-                                <var class="js-show-m"><?php echo $row[account] ;?></var><i>元</i>
-
-                            </strong>
-										<a class="assets-transfer" href="recharge.php">充值</a>
-										<a class="assets-transfer" href="withdraw.php">提现</a>
-									</div>
-								</li>
-								<!--未开通活期通显示-->
-							</ul>
-								<?php  endforeach;?>
-							<?php }else{ ?>
-							<ul class="per-balance">
-								<li class="balance-item1">
-									<span class="total-income">盛贷网账户余额</span>
-									<div class="balance-num clearfix">
-										<strong class="balance-before-num">
-				 				
-
-                                <var class="js-show-m">0.0</var><i>元</i>
-
-                            </strong>
-										<a class="assets-transfer" href="recharge.php">充值</a>
-										<a class="assets-transfer" href="withdraw.php">提现</a>
-									</div>
-								</li>
-								<!--未开通活期通显示-->
-							</ul>
-							
-							
-							<?php } ?>
+							<div class="per-assets">
+								<div class="assets-box clearfix">
+									<p class="total-income">盛贷网累计收益：</p>
+									<p class="total-num"><span class="js-show-m">29,709</span>元</p>
+								</div>
+								<ul class="assets-list">
+									<li><span class="icon" data-assets-list="ben">本</span>代收本金:29,709元</li>
+									<li><span class="icon" data-assets-list="shou">收</span>代收收益:29,709元</li>
+									<li><span class="icon" data-assets-list="dong">冻</span>冻结金额:29,709元</li>
+									<li><span class="icon" data-assets-list="jiang">奖</span>累计奖金:29,709元</li>
+									
+								</ul>
+							</div>
+							<div class="per-balance">
+								<p class="total-income">盛贷网账户余额</p>
+								<p class="total-num"><span class="js-show-m">29,709</span>元</p>
+								<div class="clearfix">
+									<a class="oran_button_m" href="recharge.php">充值</a>
+									<a class="oran_button_m" href="withdraw.php">提现</a>
+								</div>
+							</div>
 						</div>
 						<!--显示最近5条的还款计划和交易记录-->
 						<!--交易总览start -->
@@ -260,24 +90,41 @@ $rowse = fetchAll($sqle);
 							<div class="repayment">
 								<!-- 还款计划start -->
 								<div class="record-name clearfix">
-									<strong>还款计划</strong>
-									<a href="investLog.php" target="_blank">查看详情</a>
+									<span>还款计划</span>
+									<a href="investLog.php" target="_blank" class="oran_button_s">查看详情</a>
 								</div>
 								<table class="record-detail">
-									<tbody>
+									<thead>
 										<tr>
-											<td width="127" class="record-detail-title">项目名</td>
-											<td width="112" class="record-detail-title">还款日</td>
-											<td width="127" class="record-detail-title">
+											<th width="127" class="record-detail-title">项目名</th>
+											<th width="112" class="record-detail-title">还款日</th>
+											<th width="127" class="record-detail-title">
 												<div>还款类型&nbsp;&nbsp;/&nbsp;</div>
 												<div>金额（元）</div>
-											</td>
+											</th>
 										</tr>
+									</thead>	
+									<tbody>
 										<!--如果有还款计划，显示最新五条-->
-										<!--如果没有内容-->
-										<tr rel="dynamic">
-											<td colspan="3" class="no-record">暂无还款计划</td>
+										<tr>
+											<td> </td>
+											<td> </td>
+											<td> </td>
 										</tr>
+										<tr>
+											<td> </td>
+											<td> </td>
+											<td> </td>
+										</tr>
+										<tr>
+											<td> </td>
+											<td> </td>
+											<td> </td>
+										</tr>
+										<!--如果没有内容-->
+										<!-- <tr rel="dynamic">
+											<td colspan="3" class="no-record">暂无还款计划</td>
+										</tr> -->
 									</tbody>
 								</table>
 							</div>
@@ -285,47 +132,38 @@ $rowse = fetchAll($sqle);
 							<div class="trrecord">
 								<!-- 交易记录start -->
 								<div class="record-name clearfix">
-									<strong>近期交易</strong>
-									<a href="tradeLog.php" target="_blank">查看详情</a>
+									<span>近期交易</span>
+									<a href="tradeLog.php" target="_blank" class="oran_button_s">查看详情</a>
 								</div>
-								
-						
-									
-											
-											
-											 
 								<table class="record-detail">
+									<thead>
+										<tr>
+											<th width="130" class="record-detail-title">时间</th>
+											<th width="120" class="record-detail-title">类型</th>
+											<th width="108" class="record-detail-title">金额（元）</th>
+										</tr>
+									</thead>
 									<tbody>
-									<tr>
-											<td width="130" class="record-detail-title">时间</td>
-											<td width="120" class="record-detail-title">类型</td>
-											<td width="108" class="record-detail-title">金额（元）</td>
+
+										<tr>
+											<td> </td>
+											<td> </td>
+											<td> </td>
 										</tr>
-										<?php if ($rows) {?>
-                        
-									<?php foreach($rows as $row):?>
-										
-										<tr class="con-gray">
-											<td class="no-record"><?php echo date("Y-m-d",( $row['time']));?></td>											
-											<td class="no-record"><?php echo $row['leixing'];?></td>					
-											<td class="no-record"><?php echo $row['money'];?></td>
-									</tr>
-										 <?php  endforeach;?>
-										
-										
-										<?php }else{ ?>
-											<tr >
+										<tr>
+											<td> </td>
+											<td> </td>
+											<td> </td>
+										</tr>
+										<tr>
+											<td> </td>
+											<td> </td>
+											<td> </td>
+										</tr>
+										</tr>
+										<!-- <tr>
 											<td colspan="3" class="no-record">暂无交易记录</td>
-										</tr>
-										
-										
-                                       <?php }?>
-											 <?php if($totalRows>$pageSize):?>
-                            <tr>
-                            	<td colspan="7"><?php echo showPage($page, $totalPage,"keywords={$keywords}&order={$order}");?></td>
-                            </tr>
-								  <?php endif;?>
-										
+										</tr> -->
 									</tbody>
 								</table>
 							</div>
@@ -334,40 +172,14 @@ $rowse = fetchAll($sqle);
 						<!-- 交易总览end -->
 					</div>
 				</div>
-			</div>
-			<div class="goup" style="display: none;"></div>
+
+
 		</div>
+
+
 		<!--footer-->
 
-		<div class="footer">
-			<div class="footer_main clearfix">
-				<div class="footer_left">
-					<div class="footer_nav">
-						<a href="../about/about.php">关于我们</a>
-						<a href="../help/help.php">帮助中心</a>
-						<a href="../zhinan.php">新手指南</a>
-						<a href="../about/join.php">加入我们</a>
-						<a href="../about/contact.php">联系我们</a>
-
-					</div>
-					<div class="copyright">Copyright ©2015盛贷网</div>
-
-				</div>
-				<div class="footer_right">
-					<ul>
-						<li class="right_1">客服热线（工作日时间：9:00-18:00）</li>
-						<li class="right_2">2190929/4008501896</li>
-
-						<li class="right_1">QQ:3248537223
-							<br>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-
-
-		
+		<include file="Public:footer" />
 	</body>
 
 </html>						   

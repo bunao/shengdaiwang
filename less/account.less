@@ -89,6 +89,7 @@
 .right-side-box{
 	width: 820px;
 	float: right;
+<<<<<<< HEAD
 	h2{
 		line-height: 35px;
 		margin-top: 30px;
@@ -188,10 +189,91 @@
 		span{
 			.icons(14px,14px,-108px,-88px);
 			margin-top: -3px;
+=======
+}
+
+/*----==============index.html==============----*/
+.person-wrap{
+
+}
+.person-top{
+	height: 80px;
+	width: 100%;
+	background-color: @bg_grey;
+	.borderbox();
+	padding: 14px 100px 0 34px;
+	position: relative;
+	margin-bottom: 14px;
+	.greet{
+		color:@default_oran;
+		line-height: 26px;
+	}
+	.last-login{
+		.fgrey2();
+		line-height: 26px;
+	}
+	.secure-level{
+		position: absolute;
+		bottom: 20px;
+		right: 100px;
+		.processbar{
+			margin-left: 10px;
+		}
+		a{
+			color: @default_blue;
+		}
+	}
+}
+.person-main{
+	height: 270px;
+	background-color: @bg_grey;
+	.borderbox();
+	padding: 16px 34px;
+	.fgrey2();
+
+	.per-assets{
+		.fl(l);
+	}
+	.per-balance{
+		.fl(l);
+		margin-left: 320px;
+	}
+	.total-income{
+		line-height: 30px;
+	}
+	.total-num{
+		line-height: 60px;
+		span{
+			.ft(45px);
+			margin-right: 5px;
+		}
+	}
+	.assets-list{
+		margin-top: 10px;
+		li{
+			height: 30px;
+			line-height: 30px;
+		}
+		span{
+			margin: -4px 4px 0 0;
+		}
+		span[data-assets-list="ben"]{
+			.icons(18px,18px,-109px,-16px);
+		}
+		span[data-assets-list="shou"]{
+			.icons(18px,18px,-129px,-16px);
+		}
+		span[data-assets-list="dong"]{
+			.icons(18px,18px,-149px,-16px);
+		}
+		span[data-assets-list="jiang"]{
+			.icons(18px,18px,-169px,-16px);
+>>>>>>> d76cd39da71454f97e916c1266c5f3a08058d874
 		}
 	}
 }
 
+<<<<<<< HEAD
 .tl-recent{
 	position: relative;
 	float: left;
@@ -301,6 +383,124 @@
 		}
 		tr:nth-child(even){
 			background-color: @bg_grey;
+=======
+.account-trade{
+	margin-top: 24px;
+	.repayment{
+		width: 440px;
+		.fl(l);
+	}
+	.trrecord{
+		width: 354px;
+		.fl(r);
+	}
+	.record-name{
+		span{
+			.fgrey2();
+			.ft(22px);
+		}
+		a{
+			.fl(r);
+		}
+	}
+	.record-detail{
+		.fgrey2();
+		border-collapse: collapse;
+		width: 100%;
+		margin-top: 10px;
+		th,td{
+			padding: 0 4px;
+		}
+		thead th{
+			.ft(14px);
+			font-weight: normal;
+			background: @bg_grey2;
+			height: 49px;
+			&:last-child{
+				line-height: 24px;
+			}
+		}
+		tbody td{
+			background: @bg_grey;
+			height: 42px;
+			border-bottom: 1px solid @bg_grey2;
+			&:last-child{
+				border-bottom:none;
+			}
+		}
+	}
+}
+
+
+/*----==============securityCenter.html==============----*/
+.security{
+	.fgrey1();
+	width: 100%;
+	height: 330px;
+	background-color: @bg_grey;
+	.borderbox();
+	padding: 25px 44px;
+	.secure-level{
+		height: 30px;
+		line-height: 30px;
+		margin-bottom: 14px;
+		.processbar{
+			margin: 0 10px;
+			.process_bar(230px,10px,#42b518,30px);
+			&.high{
+				color: #42b518;
+				&:after{
+					width: 160px;
+					background: #42b518 url(../images/buttons.png) no-repeat 0 -290px;
+				}
+			}
+		}
+		.advice{
+			color: red;
+		}
+	}
+	
+	
+}
+.protected-wrap{
+	.icon{
+		margin-right: 5px;
+		margin-top: -3px;
+	}
+	.icon.well{
+		.icons(14px,14px,-80px,0);
+	}
+	.icon.bad{
+		.icons(14px,14px,-97px,0);
+	}
+	tr{
+		height: 36px;
+	}
+	.applypassword{
+		.processbar{
+			.process_bar(120px,10px,#ff4102,36px);
+			margin: 0 10px;
+		}
+	}
+	.operate{
+		a{
+			text-decoration: underline;
+			margin: 0 6px;
+			.fgrey1();
+		}
+	}
+}
+.sec-tip{
+	background: @bg_grey;
+	padding: 10px 44px 26px;
+	margin: 20px 0;
+	p{
+		.fgrey1();
+		line-height: 24px;
+		&:first-child{
+			.ft(16px);
+			line-height: 40px;
+>>>>>>> d76cd39da71454f97e916c1266c5f3a08058d874
 		}
 	}
 }
