@@ -20,10 +20,10 @@
 			<div class="tl-choose-type clearfix">
 				<h6>交易类型</h6>
 				<ul class="tl-all-type">
-					<li><a href="">全部</a></li>
+					<li class="tl-current"><a href="">全部</a></li>
 					<li><a href="">充值</a></li>
 					<li class=""><a href="">提现</a></li>
-					<li class="tl-more tl-current">
+					<li class="tl-more">
 						<a href="">更多<span class="icon"></span></a>
 						<ul>
 							<li>出借</li>
@@ -47,9 +47,8 @@
 			<div class="clearfix">
 				<div class="tl-fliter-ctrl">
 					<div class="tl-recent">
-						<input type="text" value="最近7天">
+						<input type="text" value="不限" readonly="readonly">
 						<span class="icon"></span>
-						
 						<ul>
 							<li>最近7天</li>
 							<li>最近14天</li>
@@ -57,32 +56,32 @@
 							<li>不限</li>
 						</ul>
 					</div>
-					<a href="">更多条件<span class="icon"></span></a>
+					<a id="tl-more-condition" href="">更多条件<span class="icon"></span></a>
 				</div>
 			</div>
 			
 			<div class="tl-fliter">
 				<span>起止日期：</span>
 				<div class="tl-input-icon tl-icon-date">
-					<input type="text" value="日期选择">
+					<input type="text" value="日期选择" readonly="readonly">
 					<span class="icon"></span>
 				</div>
 				<span>-</span>
 				<div class="tl-input-icon tl-icon-date tl-place">
-					<input type="text" value="日期选择">
+					<input type="text" value="日期选择" readonly="readonly">
 					<span class="icon"></span>
 				</div>
 				<span>金额范围：</span>
 				<div class="tl-input-icon tl-icon-money">
-					<input type="text" value="金额输入">
+					<input type="text" placeholder="金额输入">
 					<span class="icon"></span>
 				</div>
 				<span>-</span>
 				<div class="tl-input-icon tl-icon-money">
-					<input type="text" value="金额输入">
+					<input type="text" placeholder="金额输入">
 					<span class="icon"></span>
 				</div>
-				<a href="" class="oran_button_xs">筛选</a>
+				<a id="tl-fliter-btn" href="" class="oran_button_xs">筛选</a>
 			</div>
 
 			<div class="tl-result">
@@ -110,5 +109,7 @@
 		</div>
 	</div>
 	<include file="Public:footer" />
+	<script type="text/javascript" src="../../js/min/jquery-v1.10.2.min.js"></script>
+	<script type="text/javascript" src="../../js/account.js"></script>
 </body>
 </html>

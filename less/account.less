@@ -128,7 +128,7 @@
 		position: relative;	
 	}
 	li{
-		display: inline;
+		display: inline-block;
 		font-size: 14px;
 		a{
 			display: inline-block;
@@ -145,19 +145,24 @@
 			}
 		}
 		&.tl-more{
+			position: relative;
 			margin-right: 17px;
 			ul{
+				display: none;
 				position: absolute;
+				width: 116px;
 				border: 1px solid #e0e0e0;
 				background-color: #fff;
 				padding: 5px 0;
 				top:34px;
-				left: 145px;
+				left: 50%;
+				margin-left: -58px;
+				z-index: 999;
 			}
 			li{
 				display: block;
 				text-align: center;
-				padding: 0 10px;
+				//padding: 0 10px;
 				line-height: 20px;
 				cursor: pointer;
 				&:hover{
@@ -185,14 +190,20 @@
 		padding: 0 16px;
 		line-height: 35px;
 		padding-bottom: 10px;
-		background-color: @bg_grey;
 		.fgrey2();
 		span{
 			.icons(14px,14px,-108px,-88px);
 			margin-top: -3px;
 		}
 	}
+	a.tl-more-bg{
+		background-color: @bg_grey;
+		span{
+			background-position: -122px -88px;
+		}
+	}
 }
+
 .tl-recent{
 	position: relative;
 	float: left;
@@ -208,15 +219,18 @@
 		font-family: "Microsoft Yahei";
 		font-size: 14px;
 		.fgrey2();
+		cursor: pointer;
 	}
 	span{
 		position: absolute;
-		top: 6px;
-		right: 20px;
+		right: 13px;
+		margin: 7px;
+		cursor: pointer;
 		.icons(12px,12px,-108px,-72px);
 	}
 	ul{
 		position: absolute;
+		display: none;
 		border: 1px solid #e0e0e0;
 		padding: 5px;
 		width: 120px;
@@ -231,6 +245,7 @@
 	}
 }
 .tl-fliter{
+	display: none;
 	height: 35px;
 	line-height: 35px;
 	padding: 16px 20px;

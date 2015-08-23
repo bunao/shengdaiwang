@@ -122,7 +122,6 @@
   width: 820px;
   float: right;
 }
-<<<<<<< HEAD
 .right-side-box h2 {
   line-height: 35px;
   margin-top: 30px;
@@ -137,6 +136,7 @@
   height: 7px;
   background-image: url(../images/stripe_bg.png);
 }
+/*----=============tradeLog.html交易记录===================----*/
 .tl-choose-type {
   font-size: 14px;
   font-weight: normal;
@@ -159,7 +159,7 @@
   position: relative;
 }
 .tl-choose-type li {
-  display: inline;
+  display: inline-block;
   font-size: 14px;
 }
 .tl-choose-type li a {
@@ -175,20 +175,24 @@
   color: #fff;
 }
 .tl-choose-type li.tl-more {
+  position: relative;
   margin-right: 17px;
 }
 .tl-choose-type li.tl-more ul {
+  display: none;
   position: absolute;
+  width: 116px;
   border: 1px solid #e0e0e0;
   background-color: #fff;
   padding: 5px 0;
   top: 34px;
-  left: 145px;
+  left: 50%;
+  margin-left: -58px;
+  z-index: 999;
 }
 .tl-choose-type li.tl-more li {
   display: block;
   text-align: center;
-  padding: 0 10px;
   line-height: 20px;
   cursor: pointer;
 }
@@ -216,7 +220,6 @@
   padding: 0 16px;
   line-height: 35px;
   padding-bottom: 10px;
-  background-color: #f8f8f8;
   color: #5d5d5d;
 }
 .tl-fliter-ctrl a span {
@@ -224,6 +227,12 @@
   height: 14px;
   background-position: -108px -88px;
   margin-top: -3px;
+}
+.tl-fliter-ctrl a.tl-more-bg {
+  background-color: #f8f8f8;
+}
+.tl-fliter-ctrl a.tl-more-bg span {
+  background-position: -122px -88px;
 }
 .tl-recent {
   position: relative;
@@ -241,17 +250,20 @@
   font-family: "Microsoft Yahei";
   font-size: 14px;
   color: #5d5d5d;
+  cursor: pointer;
 }
 .tl-recent span {
   position: absolute;
-  top: 6px;
-  right: 20px;
+  right: 13px;
+  margin: 7px;
+  cursor: pointer;
   width: 12px;
   height: 12px;
   background-position: -108px -72px;
 }
 .tl-recent ul {
   position: absolute;
+  display: none;
   border: 1px solid #e0e0e0;
   padding: 5px;
   width: 120px;
@@ -267,6 +279,7 @@
   background-color: #eeeeee;
 }
 .tl-fliter {
+  display: none;
   height: 35px;
   line-height: 35px;
   padding: 16px 20px;
@@ -337,7 +350,7 @@
 }
 .tl-result .tl-detail tr:nth-child(even) {
   background-color: #f8f8f8;
-=======
+}
 /*----==============index.html==============----*/
 .person-top {
   height: 80px;
@@ -586,5 +599,4 @@
 .sec-tip p:first-child {
   font-size: 16px;
   line-height: 40px;
->>>>>>> d76cd39da71454f97e916c1266c5f3a08058d874
 }

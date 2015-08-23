@@ -5,9 +5,6 @@
   display: inline-block;
   background: url(../images/icons.png) no-repeat;
 }
-* {
-  font-family: 'Microsoft Yahei';
-}
 .main {
   width: 1016px;
   margin: 30px auto;
